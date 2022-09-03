@@ -2,16 +2,16 @@
   <div id="menu">
     <ul id="list">
       <li><router-link to="/home">
-        <img src="/public/images/icon/首页_home.png" class="icon"><p>主页</p>
+        <img src="/images/icon/首页_home.png" class="icon"><p>主页</p>
       </router-link></li>
       <li><router-link to="/note">
-        <img src="/public/images/icon/书籍_book.png" class="icon"><p>笔记</p>
+        <img src="/images/icon/书籍_book.png" class="icon"><p>笔记</p>
       </router-link></li>
       <li><router-link to="/saysay">
-        <img src="public/images/icon/标签_tag-one.png" class="icon"><p>说说</p>
+        <img src="/images/icon/标签_tag-one.png" class="icon"><p>说说</p>
       </router-link></li>
       <li><router-link to="/message">
-        <img src="public/images/icon/信封1_envelope-one.png" class="icon"><p>留言</p>
+        <img src="/images/icon/信封1_envelope-one.png" class="icon"><p>留言</p>
       </router-link></li>
       <li><router-link to="/eihei">
         <p>诶嘿ヾ(*ゝω・*)ノ</p>
