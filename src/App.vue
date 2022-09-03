@@ -1,10 +1,21 @@
-<script>
-
-</script>
-
 <template>
-
+  <Menu></Menu>
+  <SidebarLeft></SidebarLeft>
+  <div id="Main"><router-view></router-view></div>
+  <SidebarRight></SidebarRight>
+  <div id="Beian">
+    <p>这是备案号\(^o^)/~</p>
+  </div>
 </template>
+
+<script>
+  import Menu from "./components/Menu";
+  import SidebarLeft from "./components/SidebarLeft";
+  import SidebarRight from "./components/SidebarRight";
+  export default {
+    components: {SidebarRight, SidebarLeft, Menu}
+  }
+</script>
 
 <style scoped>
 
