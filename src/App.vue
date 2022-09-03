@@ -1,7 +1,7 @@
 <template>
   <Menu></Menu>
   <SidebarLeft></SidebarLeft>
-  <div id="Main"><router-view></router-view></div>
+<!--  <div id="Main"><router-view></router-view></div>-->
   <SidebarRight></SidebarRight>
   <div id="Beian">
     <p>这是备案号\(^o^)/~</p>
@@ -13,7 +13,10 @@
   import SidebarLeft from "./components/SidebarLeft";
   import SidebarRight from "./components/SidebarRight";
   export default {
-    components: {SidebarRight, SidebarLeft, Menu}
+    components: {SidebarRight, SidebarLeft, Menu},
+    mounted() {
+      document.getElementsByTagName('Menu')[0].style.width = `${innerWidth}px`
+    }
   }
 </script>
 
