@@ -41,6 +41,7 @@
   ul {
     position: relative;
     margin: 0 auto;
+    list-style: none;
   }
 
   li {
