@@ -15,9 +15,9 @@
 <style scoped>
   #UserCard {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 16px 32px;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   #avatar {
