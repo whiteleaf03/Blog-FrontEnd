@@ -24,5 +24,6 @@
   * {
     margin: 0;
     padding: 0;
+    user-select: none;
   }
 </style>
