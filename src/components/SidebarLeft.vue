@@ -15,7 +15,6 @@
     components: {BlogRunningTime, LinkList, UserCard},
     mounted() {
       document.getElementById("SidebarLeft").style.marginLeft = `${innerWidth * 0.15}px`
-      document.getElementById("SidebarLeft").style.marginRight = `0px`
     }
   }
 </script>
@@ -25,5 +24,6 @@
     width: 260px;
     background-color: rgba(245, 245, 245, 0.2);
     backdrop-filter: blur(5px);
+    display: inline-block;
   }
 </style>

@@ -1,8 +1,10 @@
 <template>
   <Menu></Menu>
-  <SidebarLeft></SidebarLeft>
-<!--  <div id="Main"><router-view></router-view></div>-->
-  <SidebarRight></SidebarRight>
+  <div id="MainArea">
+    <SidebarLeft></SidebarLeft>
+    <Content></Content>
+    <SidebarRight></SidebarRight>
+  </div>
   <div id="Beian">
     <p>这是备案号\(^o^)/~</p>
   </div>
@@ -11,9 +13,10 @@
 <script>
   import Menu from "./components/Menu";
   import SidebarLeft from "./components/SidebarLeft";
+  import Content from "./components/Content";
   import SidebarRight from "./components/SidebarRight";
   export default {
-    components: {SidebarRight, SidebarLeft, Menu},
+    components: {Menu, SidebarLeft, Content, SidebarRight},
     mounted() {
       document.getElementsByTagName('Menu')[0].style.width = `${innerWidth}px`
     }
