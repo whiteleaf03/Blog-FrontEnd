@@ -14,7 +14,7 @@
     name: "SidebarLeft",
     components: {BlogRunningTime, LinkList, UserCard},
     mounted() {
-      document.getElementById("SidebarLeft").style.marginLeft = `${innerWidth * 0.2}px`
+      document.getElementById("SidebarLeft").style.marginLeft = `${innerWidth * 0.15}px`
       document.getElementById("SidebarLeft").style.marginRight = `0px`
     }
   }
