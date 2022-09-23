@@ -1,6 +1,6 @@
 <template>
   <div id="UserCard">
-    <img src="https://s1.ax1x.com/2022/09/06/v7yQcd.jpg" id="avatar" alt="ERROR">
+    <img src="https://i.postimg.cc/3wZw7rM6/avatar.jpg" id="avatar" alt="ERROR">
     <p id="username">WhiteLeaf03</p>
     <p id="introduce">一枚渣渣程序员</p>
   </div>
