@@ -18,8 +18,9 @@
 <style scoped>
   #Chunibyou {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
     padding: 16px 32px;
     border-radius: 5px;
+    border: 1px solid #42a1ff;
   }
 </style>

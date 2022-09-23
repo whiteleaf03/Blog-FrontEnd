@@ -29,11 +29,12 @@
 <style scoped>
   #QuickComment {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.3);
     padding: 16px 32px;
     border-radius: 5px;
-    margin-top: 6px;
+    border: 1px solid #42a1ff;
+    margin-top: 16px;
     text-align: center;
+    backdrop-filter: blur(3px);
   }
 
   #title {
@@ -49,13 +50,13 @@
     width: 196px;
     height: 24px;
     border-radius: 5px;
-    border: 1px solid deepskyblue;
+    border: 2px solid deepskyblue;
     outline: none;
   }
 
   .input:focus {
     outline: none;
     background-color: white;
-    border: 3px solid #0080ff;
+    border: 2px solid #0080ff;
   }
 </style>

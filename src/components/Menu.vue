@@ -34,8 +34,8 @@
     position: relative;
     margin: 0 auto 32px;
     height: 32px;
-    background-color: rgba(245, 245, 245, 0.5);
     padding: 8px 0;
+    border-bottom: 1px solid #42a1ff;
   }
 
   ul {

@@ -22,8 +22,6 @@
 <style scoped>
   #SidebarLeft {
     width: 260px;
-    background-color: rgba(245, 245, 245, 0.2);
-    backdrop-filter: blur(5px);
     display: inline-block;
   }
 </style>
