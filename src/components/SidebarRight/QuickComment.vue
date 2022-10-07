@@ -35,6 +35,7 @@
     margin-top: 16px;
     text-align: center;
     backdrop-filter: blur(3px);
+    background-color: rgba(245, 245, 245, 0.5);
   }
 
   #title {
@@ -52,6 +53,7 @@
     border-radius: 5px;
     border: 2px solid deepskyblue;
     outline: none;
+    background-color: rgba(245, 245, 245);
   }
 
   .input:focus {

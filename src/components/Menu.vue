@@ -36,6 +36,7 @@
     height: 32px;
     padding: 8px 0;
     border-bottom: 1px solid #42a1ff;
+    background-color: rgba(245, 245, 245, 0.5);
   }
 
   ul {

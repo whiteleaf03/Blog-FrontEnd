@@ -23,6 +23,7 @@
     border-radius: 5px;
     border: 1px solid #42a1ff;
     backdrop-filter: blur(3px);
+    background-color: rgba(245, 245, 245, 0.5);
     margin-top: 16px;
   }
 

@@ -21,8 +21,8 @@
       randomBackgroundImage() {
         let file
         do {
-          file = Math.round(Math.random() * 22)
-        } while (file === 22 || file === 0)
+          file = Math.round(Math.random() * 21)
+        } while (file === 21 || file === 0)
         console.log(file)
         document.body.style.backgroundImage = `url("images/background/${file}.jpg")`
       }
