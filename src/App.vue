@@ -53,6 +53,11 @@
     src: url("/font-family/BaoTuXiaoBaiTi-2.ttf");
   }
 
+  @font-face {
+    font-family: 阿里巴巴普惠体-regular;
+    src: url("font-family/AlibabaPuHuiTi-2-55-Regular");
+  }
+
   /*@font-face {*/
   /*  font-family: "站酷仓耳渔阳体";*/
   /*  src: url("/font-family/TsangerYuYangT_W01_W01.ttf");*/
