@@ -45,7 +45,7 @@
 <style>
   #BlogRunningTime {
     position: relative;
-    padding: 16px 32px;
+    padding: 16px;
     border-radius: 5px;
     border: 1px solid #42a1ff;
     backdrop-filter: blur(3px);
@@ -55,6 +55,6 @@
   }
 
   .runtime-text {
-    padding: 5px;
+    font-size: 20px;
   }
 </style>

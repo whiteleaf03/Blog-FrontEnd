@@ -41,31 +41,36 @@
     margin: 0;
     padding: 0;
     user-select: none;
-    font-family: 站酷仓耳渔阳体, fangsong;
+    font-family: 包圆小白体, fangsong;
+    font-size: 24px;
   }
 
   body {
     background-size: cover;
   }
+  @font-face {
+    font-family: 包圆小白体;
+    src: url("/font-family/BaoTuXiaoBaiTi-2.ttf");
+  }
 
-  @font-face {
-    font-family: "站酷仓耳渔阳体";
-    src: url("/font-family/TsangerYuYangT_W01_W01.ttf");
-  }
-  @font-face {
-    font-family: "站酷仓耳渔阳体";
-    src: url("/font-family/TsangerYuYangT_W02_W02.ttf");
-  }
-  @font-face {
-    font-family: "站酷仓耳渔阳体";
-    src: url("/font-family/TsangerYuYangT_W03_W03.ttf");
-  }
-  @font-face {
-    font-family: "站酷仓耳渔阳体";
-    src: url("/font-family/TsangerYuYangT_W04_W04.ttf");
-  }
-  @font-face {
-    font-family: "站酷仓耳渔阳体";
-    src: url("/font-family/TsangerYuYangT_W05_W05.ttf");
-  }
+  /*@font-face {*/
+  /*  font-family: "站酷仓耳渔阳体";*/
+  /*  src: url("/font-family/TsangerYuYangT_W01_W01.ttf");*/
+  /*}*/
+  /*@font-face {*/
+  /*  font-family: "站酷仓耳渔阳体";*/
+  /*  src: url("/font-family/TsangerYuYangT_W02_W02.ttf");*/
+  /*}*/
+  /*@font-face {*/
+  /*  font-family: "站酷仓耳渔阳体";*/
+  /*  src: url("/font-family/TsangerYuYangT_W03_W03.ttf");*/
+  /*}*/
+  /*@font-face {*/
+  /*  font-family: "站酷仓耳渔阳体";*/
+  /*  src: url("/font-family/TsangerYuYangT_W04_W04.ttf");*/
+  /*}*/
+  /*@font-face {*/
+  /*  font-family: "站酷仓耳渔阳体";*/
+  /*  src: url("/font-family/TsangerYuYangT_W05_W05.ttf");*/
+  /*}*/
 </style>

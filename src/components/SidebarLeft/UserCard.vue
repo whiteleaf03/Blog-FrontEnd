@@ -15,7 +15,7 @@
 <style scoped>
   #UserCard {
     position: relative;
-    padding: 16px 32px;
+    padding: 16px;
     border-radius: 5px;
     border: 1px solid #42a1ff;
     backdrop-filter: blur(3px);
@@ -33,11 +33,12 @@
 
   #username {
     display: inline-block;
-    font-family: "Copperplate Gothic Light", serif;
+    font-family: 包圆小白体, fangsong, serif;
     height: 54px;
     line-height: 54px;
-    font-size: medium;
+    font-size: 28px;
     font-weight: bolder;
+    vertical-align: middle;
   }
 
   #introduce {
