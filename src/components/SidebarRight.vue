@@ -2,15 +2,17 @@
   <div id="SideBarRight">
     <Chunibyou></Chunibyou>
     <QuickComment></QuickComment>
+    <Copyright></Copyright>
   </div>
 </template>
 
 <script>
   import Chunibyou from "./SidebarRight/Chunibyou";
   import QuickComment from "./SidebarRight/QuickComment";
+  import Copyright from "./SidebarRight/Copyright";
   export default {
     name: "SideBarRight",
-    components: {QuickComment, Chunibyou},
+    components: {Copyright, QuickComment, Chunibyou},
     mounted() {
       document.getElementById("SideBarRight").style.right = `${innerWidth * 0.15}px`
     }
