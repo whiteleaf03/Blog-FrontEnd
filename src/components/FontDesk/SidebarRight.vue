@@ -23,6 +23,6 @@
   #SideBarRight {
     width: 260px;
     display: inline-block;
-    position: absolute;
+    float: left;
   }
 </style>

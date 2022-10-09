@@ -1,37 +1,20 @@
 <template>
-  <Menu></Menu>
-  <div id="MainArea">
-    <SidebarLeft></SidebarLeft>
-    <Content></Content>
-    <SidebarRight></SidebarRight>
-  </div>
-  <div id="Beian">
-    <p>这是备案号\(^o^)/~</p>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
-  import Menu from "./components/Menu";
-  import SidebarLeft from "./components/SidebarLeft";
-  import Content from "./components/Content";
-  import SidebarRight from "./components/SidebarRight";
   export default {
-    components: {Menu, SidebarLeft, Content, SidebarRight},
     methods: {
       randomBackgroundImage() {
         let file
         do {
           file = Math.round(Math.random() * 21)
         } while (file === 21 || file === 0)
-        console.log(file)
         document.body.style.backgroundImage = `url("images/background/${file}.jpg")`
       }
     },
-    created() {
-      this.randomBackgroundImage()
-    },
     mounted() {
-      document.getElementsByTagName('Menu')[0].style.width = `${innerWidth}px`
+      this.randomBackgroundImage()
     }
   }
 </script>
@@ -47,7 +30,9 @@
 
   body {
     background-size: cover;
+    position: relative;
   }
+
   @font-face {
     font-family: 包圆小白体;
     src: url("/font-family/BaoTuXiaoBaiTi-2.ttf");

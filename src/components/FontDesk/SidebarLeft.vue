@@ -14,7 +14,7 @@
     name: "SidebarLeft",
     components: {BlogRunningTime, LinkList, UserCard},
     mounted() {
-      document.getElementById("SidebarLeft").style.marginLeft = `${innerWidth * 0.15}px`
+      // document.getElementById("SidebarLeft").style.marginLeft = `${innerWidth * 0.15}px`
     }
   }
 </script>
@@ -23,5 +23,6 @@
   #SidebarLeft {
     width: 260px;
     display: inline-block;
+    float: left;
   }
 </style>

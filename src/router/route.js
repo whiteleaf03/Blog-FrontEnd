@@ -1,32 +1,41 @@
-import Home from '../components/Main/Home'
-import Note from "../components/Main/Note";
-import Saysay from "../components/Main/Saysay";
-import Message from "../components/Main/Message";
-import Eihei from "../components/Main/Eihei";
+import Home from '../components/FontDesk/Main/Home'
+import Note from "../components/FontDesk/Main/Note";
+import Saysay from "../components/FontDesk/Main/Saysay";
+import Message from "../components/FontDesk/Main/Message";
+import Eihei from "../components/FontDesk/Main/Eihei";
+import Login from "../components/BackDesk/Login";
+import FontDesk from "../components/FontDesk";
 
 export const routes = [
     {
         path: '/',
-        redirect: '/home'
+        component: FontDesk,
+        redirect: '/home',
+        children: [
+            {
+                path: '/home',
+                component: Home
+            },
+            {
+                path: '/note',
+                component: Note
+            },
+            {
+                path: '/saysay',
+                component: Saysay
+            },
+            {
+                path: '/message',
+                component: Message
+            },
+            {
+                path: '/eihei',
+                component: Eihei
+            }
+        ]
     },
     {
-        path: '/home',
-        component: Home
-    },
-    {
-        path: '/note',
-        component: Note
-    },
-    {
-        path: '/saysay',
-        component: Saysay
-    },
-    {
-        path: '/message',
-        component: Message
-    },
-    {
-        path: '/eihei',
-        component: Eihei
+        path: '/login',
+        component: Login
     }
 ]

@@ -18,11 +18,11 @@
     backdrop-filter: blur(8px);
     background-color: rgba(245, 245, 245, 0.5);
     display: inline-block;
-    position: absolute;
     min-height: 320px;
     margin: 0 16px;
     border-radius: 5px;
     border: 1px solid deepskyblue;
     padding: 32px;
+    float: left;
   }
 </style>
