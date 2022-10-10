@@ -9,10 +9,12 @@ export default defineConfig({
     extensions: ['.js', '.vue']
   },
   server: {
-    port: 80
-  },
-  preview: {
-    port: 80
+    port: 80,
+    proxy: {
+      '/bs/api': {
+        target: 'http://127.0.0.1:8080'
+      }
+    }
   },
   build: {
     outDir: 'Blog-FontEnd'
