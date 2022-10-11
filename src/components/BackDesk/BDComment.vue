@@ -1,10 +1,10 @@
 <template>
-
+  网站留言管理
 </template>
 
 <script>
   export default {
-    name: "Home"
+    name: "BDComment"
   }
 </script>
 

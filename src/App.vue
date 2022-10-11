@@ -24,7 +24,6 @@
     margin: 0;
     padding: 0;
     user-select: none;
-    font-family: 包圆小白体, fangsong;
     font-size: 24px;
   }
 
@@ -40,6 +39,11 @@
 
   @font-face {
     font-family: 阿里巴巴普惠体-regular;
-    src: url("font-family/AlibabaPuHuiTi-2-55-Regular");
+    src: url("/font-family/AlibabaPuHuiTi-2-55-Regular");
+  }
+
+  @font-face {
+    font-family: Tanugo糖果手写体;
+    src: url("/font-family/Tanugo-Round-Light-2.otf");
   }
 </style>
