@@ -1,8 +1,6 @@
 <template>
   <div id="Login">
-    <div id="title">
-      登 录
-    </div>
+    <div id="title">风 起 地</div>
     <div class="line">
       <div class="tips">用户名</div>
       <div class="input"><input v-model="username" type="text"></div>
@@ -13,7 +11,7 @@
     </div>
     <div class="line">
       <div style="width: 360px; text-align: center">
-        <input class="button" type="button" value="can can need">
+        <input class="button" type="button" value="can can need" v-on:click="login">
       </div>
     </div>
     <div class="line">
@@ -32,6 +30,11 @@
         username: '',
         password: '',
         valid: ''
+      }
+    },
+    methods: {
+      async login() {
+        this.$router.push('/admin')
       }
     }
   }

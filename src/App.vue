@@ -10,7 +10,7 @@
         do {
           file = Math.round(Math.random() * 21)
         } while (file === 21 || file === 0)
-        document.body.style.backgroundImage = `url("images/background/${file}.jpg")`
+        document.body.style.backgroundImage = `url("/images/background/${file}.jpg")`
       }
     },
     mounted() {
@@ -42,25 +42,4 @@
     font-family: 阿里巴巴普惠体-regular;
     src: url("font-family/AlibabaPuHuiTi-2-55-Regular");
   }
-
-  /*@font-face {*/
-  /*  font-family: "站酷仓耳渔阳体";*/
-  /*  src: url("/font-family/TsangerYuYangT_W01_W01.ttf");*/
-  /*}*/
-  /*@font-face {*/
-  /*  font-family: "站酷仓耳渔阳体";*/
-  /*  src: url("/font-family/TsangerYuYangT_W02_W02.ttf");*/
-  /*}*/
-  /*@font-face {*/
-  /*  font-family: "站酷仓耳渔阳体";*/
-  /*  src: url("/font-family/TsangerYuYangT_W03_W03.ttf");*/
-  /*}*/
-  /*@font-face {*/
-  /*  font-family: "站酷仓耳渔阳体";*/
-  /*  src: url("/font-family/TsangerYuYangT_W04_W04.ttf");*/
-  /*}*/
-  /*@font-face {*/
-  /*  font-family: "站酷仓耳渔阳体";*/
-  /*  src: url("/font-family/TsangerYuYangT_W05_W05.ttf");*/
-  /*}*/
 </style>
