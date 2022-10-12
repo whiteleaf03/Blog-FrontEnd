@@ -55,6 +55,7 @@
     outline: none;
     background-color: rgba(245, 245, 245);
     font-size: 6px;
+    padding: 6px;
   }
 
   .input:focus {
