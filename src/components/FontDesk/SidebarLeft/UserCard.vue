@@ -36,7 +36,7 @@
     font-family: 包圆小白体, fangsong, serif;
     height: 54px;
     line-height: 54px;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bolder;
     vertical-align: middle;
   }
@@ -44,5 +44,7 @@
   #introduce {
     margin-top: 16px;
     text-align: right;
+    font-family: Tanugo糖果手写体, fangsong;
+    font-size: 18px;
   }
 </style>

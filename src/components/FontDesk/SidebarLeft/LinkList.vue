@@ -1,6 +1,6 @@
 <template>
   <div id="LinkList">
-    <p id="title">欢迎来玩OwO</p>
+    <p id="title">欢迎来玩<br></p>
     <ul>
       <li style="border-top: 0; user-select: text;"><p>whiteleaf03@163.com</p></li>
       <li><a href="https://space.bilibili.com/22199790"><p>Bilibili</p></a></li>
@@ -27,10 +27,16 @@
     margin-top: 16px;
   }
 
+  p {
+    font-family: Tanugo糖果手写体, fangsong;
+    font-size: 16px;
+  }
+
   #title {
-    font-size: 24px;
+    font-size: 48px;
     text-align: center;
     margin: 8px auto;
+    font-family: 包圆小白体, fangsong;
   }
 
   ul {

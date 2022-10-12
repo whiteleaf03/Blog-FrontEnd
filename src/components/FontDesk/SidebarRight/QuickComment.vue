@@ -4,9 +4,7 @@
     <p class="tips">昵称</p>
     <input v-model="username" class="input">
     <p class="tips">邮箱</p>
-    <input v-model="email" class="input">
-    <p class="tips">密码</p>
-    <input v-model="password" class="input">
+    <input v-model="email" placeholder="非必填，审核通过后发送邮件通知" class="input">
     <p class="tips">留言</p>
     <textarea v-model="comment" class="input" style="resize: none; height: 96px"></textarea>
   </div>
@@ -39,12 +37,14 @@
   }
 
   #title {
-    font-size: 32px;
+    font-size: 36px;
+    font-family: 包圆小白体, fangsong;
   }
 
   .tips {
     text-align: left;
     width: 196px;
+    font-family: Tanugo糖果手写体, fangsong;
   }
 
   .input {
@@ -54,6 +54,7 @@
     border: 2px solid deepskyblue;
     outline: none;
     background-color: rgba(245, 245, 245);
+    font-size: 6px;
   }
 
   .input:focus {

@@ -77,7 +77,13 @@
   }
 
   p {
+    position: relative;
+    top: -10px;
     display: inline-block;
+    font-family: 包圆小白体, fangsong;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
   }
 
   #login {

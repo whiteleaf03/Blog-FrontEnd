@@ -33,9 +33,9 @@
         RunTime = (RunTime - day) / 365;
         const year = RunTime;
         if (`${sec}`.length === 1) {
-          this.value = `${year}年 ${day}天 ${hour}时 ${min}分 0${sec}秒`;
+          this.value = `${year}年${day}天 ${hour}时${min}分0${sec}秒`;
         } else {
-          this.value = `${year}年 ${day}天 ${hour}时 ${min}分 ${sec}秒`;
+          this.value = `${year}年${day}天 ${hour}时${min}分${sec}秒`;
         }
       }
     }
@@ -56,5 +56,6 @@
 
   .runtime-text {
     font-size: 20px;
+    font-family: Tanugo糖果手写体, fangsong;
   }
 </style>

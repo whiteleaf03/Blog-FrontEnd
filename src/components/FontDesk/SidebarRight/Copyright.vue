@@ -5,7 +5,7 @@
     <div class="title">导航栏图标</div>
     <div class="line">IconPark</div>
     <div class="title">使用字体</div>
-    <div class="line">包圆小白体 阿里普惠体</div>
+    <div class="line">包圆小白体 阿里普惠体<br>Tanugo糖果手写体</div>
   </div>
 </template>
 
@@ -30,10 +30,11 @@
   .title {
     font-size: 20px;
     font-weight: lighter;
+    font-family: 包圆小白体, fangsong;
   }
 
   .line {
-    font-family: 阿里巴巴普惠体-regular;
+    font-family: Tanugo糖果手写体, fangsong;
     font-size: 16px;
     font-weight: lighter;
   }
