@@ -33,7 +33,7 @@
   }
 
   #title {
-    font-size: 48px;
+    font-size: 46px;
     text-align: center;
     margin: 8px auto;
     font-family: 包圆小白体, fangsong;
