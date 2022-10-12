@@ -27,10 +27,7 @@
 
 <script>
   export default {
-    mounted() {
-      document.getElementById('menu').style.width = `${innerWidth}px`
-      document.getElementById('list').style.width = `${innerWidth * 0.7}px`
-    }
+
   }
 </script>
 
