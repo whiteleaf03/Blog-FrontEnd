@@ -1,5 +1,6 @@
 <template>
   <div id="menu">
+    <div style="flex: 1"></div>
     <ul id="list">
       <li><router-link to="/home">
         <img src="images/icon/首页_home.png" class="icon"><p>主页</p>
@@ -20,6 +21,7 @@
         <img src="images/icon/我的_me.png" class="icon" id="login">
       </router-link></li>
     </ul>
+    <div style="flex: 1"></div>
   </div>
 </template>
 
@@ -40,12 +42,14 @@
     padding: 8px 0;
     border-bottom: 1px solid #42a1ff;
     background-color: rgba(245, 245, 245, 0.5);
+    display: flex;
   }
 
   #list {
     position: relative;
     margin: 0 auto;
     list-style: none;
+    flex: 5;
   }
 
   li {

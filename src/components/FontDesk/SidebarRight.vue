@@ -21,8 +21,9 @@
 
 <style scoped>
   #SideBarRight {
-    width: 260px;
+    /*width: 260px;*/
     display: inline-block;
-    float: left;
+    /*float: left;*/
+    flex: 1;
   }
 </style>

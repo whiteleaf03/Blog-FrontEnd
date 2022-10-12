@@ -23,6 +23,6 @@
     border-radius: 5px;
     border: 1px solid deepskyblue;
     padding: 32px;
-    float: left;
+    flex: 3;
   }
 </style>

@@ -2,9 +2,11 @@
   <div id="FontDesk">
     <Menu></Menu>
     <div id="MainArea">
+      <div style="flex: 1"></div>
       <SidebarLeft></SidebarLeft>
       <Content></Content>
       <SideBarRight></SideBarRight>
+      <div style="flex: 1"></div>
     </div>
     <div id="Beian">
       <p>这是备案号\(^o^)/~</p>
@@ -19,15 +21,7 @@
   import SideBarRight from "./FontDesk/SidebarRight";
   export default {
     name: "FontDesk",
-    components: {Content, SidebarLeft, SideBarRight, Menu},
-    mounted() {
-      let leftWidth = document.getElementById('SidebarLeft').clientWidth
-      let contentWidth = document.getElementById('Content').clientWidth
-      let rightWidth = document.getElementById('SideBarRight').clientWidth
-      document.getElementById('MainArea').style.width = `${leftWidth + contentWidth + rightWidth + 34}px`
-      console.log(document.getElementById('MainArea').clientWidth)
-      console.log(innerWidth)
-    }
+    components: {Content, SidebarLeft, SideBarRight, Menu}
   }
 </script>
 
@@ -40,6 +34,7 @@
     position: relative;
     height: auto;
     margin: 0 auto;
+    display: flex;
   }
 
   #Beian {
