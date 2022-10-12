@@ -37,7 +37,7 @@
 
   #title {
     font-size: 48px;
-    font-family: 阿里巴巴普惠体-regular, fangsong;
+    font-family: 包圆小白体, fangsong;
     font-weight: bolder;
   }
 
@@ -50,7 +50,7 @@
   }
 
   .li {
-    font-family: 包圆小白体, fangsong;
+    font-family: Tanugo糖果手写体, fangsong;
   }
 
   a, a:visited {

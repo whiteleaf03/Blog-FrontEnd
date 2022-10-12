@@ -12,6 +12,6 @@
 
 <style scoped>
   #BDAnalysis {
-
+    font-family: 阿里巴巴普惠体-regular, fangsong;
   }
 </style>

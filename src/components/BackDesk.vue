@@ -28,6 +28,5 @@
     padding: 48px;
     background-color: rgba(245, 245, 245, 0.5);
     flex: 8;
-    font-family: Tanugo糖果手写体;
   }
 </style>

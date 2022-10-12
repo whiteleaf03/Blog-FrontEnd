@@ -46,7 +46,7 @@
     width: 640px;
     height: auto;
     margin: 120px auto 0;
-    border: 3px black solid;
+    border: 3px gold solid;
     border-radius: 15px;
   }
 
@@ -54,11 +54,13 @@
     text-align: center;
     font-size: 56px;
     margin-top: 16px;
+    font-family: 包圆小白体, fangsong;
   }
 
   .line {
     margin: 32px auto;
     width: 360px;
+    font-family: Tanugo糖果手写体, fangsong;
   }
 
   input {
@@ -66,7 +68,7 @@
     border-radius: 5px;
     border: 1px solid black;
     padding: 6px;
-    font-family: 阿里巴巴普惠体-regular;
+    font-family: Tanugo糖果手写体, fangsong;
   }
 
   input:focus {
@@ -76,16 +78,6 @@
   .button {
     width: 180px;
     margin: 0px auto 0;
-    font-family: 包圆小白体, fangsong;
-  }
-
-  #back {
-    width: 64px;
-    height: 64px;
-    position: absolute;
-    right: 16px;
-    top: 16px;
-    border: 3px solid black;
-    border-radius: 5px;
+    font-family: 阿里巴巴普惠体-regular, fangsong;
   }
 </style>
