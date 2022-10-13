@@ -42,10 +42,13 @@
   ul {
     list-style: none;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   li {
-    padding: 16px 0;
+    flex: 1;
+    padding: 16px;
     border-top: 1px solid whitesmoke;
     border-bottom: 1px solid whitesmoke;
   }

@@ -52,10 +52,13 @@
     background-color: rgba(245, 245, 245, 0.5);
     margin-top: 16px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .runtime-text {
     font-size: 20px;
     font-family: Tanugo糖果手写体, fangsong;
+    flex: 1;
   }
 </style>

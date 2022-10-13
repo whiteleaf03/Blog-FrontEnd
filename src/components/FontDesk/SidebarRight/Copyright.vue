@@ -25,17 +25,21 @@
     text-align: center;
     backdrop-filter: blur(3px);
     background-color: rgba(245, 245, 245, 0.5);
+    display: flex;
+    flex-direction: column;
   }
 
   .title {
     font-size: 24px;
     font-weight: lighter;
     font-family: 包圆小白体, fangsong;
+    flex: 2;
   }
 
   .line {
     font-family: Tanugo糖果手写体, fangsong;
     font-size: 16px;
     font-weight: lighter;
+    flex: 1;
   }
 </style>
