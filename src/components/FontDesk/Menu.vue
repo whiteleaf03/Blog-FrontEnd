@@ -69,7 +69,7 @@
 
   .icon {
     position: relative;
-    top: -10px;
+    top: -12px;
     width: 32px;
     height: 32px;
     display: inline-block;
@@ -79,9 +79,10 @@
 
   p {
     position: relative;
-    top: -10px;
+    top: -14px;
     display: inline-block;
     font-family: 包圆小白体, fangsong;
+    font-size: 32px;
     height: 32px;
     line-height: 32px;
     vertical-align: middle;

@@ -34,6 +34,8 @@
     text-align: center;
     backdrop-filter: blur(3px);
     background-color: rgba(245, 245, 245, 0.5);
+    display: flex;
+    flex-direction: column;
   }
 
   #title {
@@ -45,16 +47,17 @@
     text-align: left;
     width: 196px;
     font-family: Tanugo糖果手写体, fangsong;
+    font-size: 24px;
   }
 
   .input {
-    width: 8rem;
+    width: ;
     height: 24px;
     border-radius: 5px;
     border: 2px solid deepskyblue;
     outline: none;
     background-color: rgba(245, 245, 245);
-    font-size: 6px;
+    font-size: 12px;
     padding: 6px;
   }
 

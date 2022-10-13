@@ -36,7 +36,7 @@
     font-family: 包圆小白体, fangsong, serif;
     height: 54px;
     line-height: 54px;
-    font-size: 1rem;
+    font-size: x-large;
     font-weight: bolder;
     vertical-align: middle;
   }

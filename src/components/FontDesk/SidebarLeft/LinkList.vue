@@ -33,7 +33,7 @@
   }
 
   #title {
-    font-size: 1.6rem;
+    font-size: 36px;
     text-align: center;
     margin: 8px auto;
     font-family: 包圆小白体, fangsong;
@@ -42,7 +42,6 @@
   ul {
     list-style: none;
     text-align: center;
-    /*background-color: whitesmoke;*/
   }
 
   li {

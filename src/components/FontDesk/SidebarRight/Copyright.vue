@@ -28,7 +28,7 @@
   }
 
   .title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: lighter;
     font-family: 包圆小白体, fangsong;
   }

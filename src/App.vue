@@ -24,7 +24,6 @@
     margin: 0;
     padding: 0;
     user-select: none;
-    font-size: 24px;
   }
 
   ::-webkit-scrollbar {

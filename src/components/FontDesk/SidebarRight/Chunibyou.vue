@@ -24,5 +24,6 @@
     border-radius: 5px;
     border: 1px solid #42a1ff;
     font-family: Tanugo糖果手写体, fangsong;
+    font-size: 24px;
   }
 </style>
