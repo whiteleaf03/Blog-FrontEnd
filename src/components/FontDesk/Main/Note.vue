@@ -1,5 +1,10 @@
 <template>
   <div id="Note">
+    <div id="Note-Search" class="Note-Item">
+      <p>搜索文章</p>
+      <input placeholder="未来可期">
+      <button><img src="images/icon/搜索_search.png"></button>
+    </div>
     <div class="Note-Item">
       <router-link to="">
         <div class="Note-Info">
@@ -98,6 +103,37 @@
 <style scoped>
   #Note {
 
+  }
+
+  #Note-Search {
+    display: flex;
+  }
+
+  #Note-Search p,#Note-Search p:hover  {
+    flex: 1;
+    line-height: 34px;
+    color: black;
+  }
+
+  #Note-Search input {
+    flex: 8;
+    height: 32px;
+    margin-right: 16px;
+    padding: 0 16px;
+  }
+
+  #Note-Search button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    background-color: rgba(245, 245, 245, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  #Note-Search button img {
+    width: 36px;
+    height: 36px;
   }
 
   .Note-Item {
