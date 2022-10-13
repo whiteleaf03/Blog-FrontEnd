@@ -27,6 +27,10 @@
     font-size: 24px;
   }
 
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
   body {
     background-size: cover;
     position: relative;
