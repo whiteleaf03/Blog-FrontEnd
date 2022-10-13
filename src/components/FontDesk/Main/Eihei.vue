@@ -19,7 +19,7 @@
     name: 'Eihei',
     data() {
       return {
-        left: 0,
+        left: 12,
         timer: 0,
         bannerWidth: 0,
         step: 150
@@ -30,15 +30,14 @@
     },
     methods: {
       runBanner() {
-        console.log('启动！')
         if (this.left <= -1800) {
           this.left = 0;
         }
-        this.left -= 6
         document.getElementById('img-list').style.marginLeft = `${this.left}px`
         let n
-        n = (this.left % 600 === 0) ? n = 1200 : n = 10
+        n = (this.left % 600 === 0) ? n = 2500 : n = 10
         this.timer = setTimeout(this.runBanner, n)
+        this.left -= 6
       }
     }
   }
@@ -55,14 +54,15 @@
 
   .title {
     font-family: 包圆小白体, fangsong;
-    font-size: 1.5rem;
+    font-size: 42px;
+    text-align: center;
   }
 
   #banner {
     width: 600px;
     height: 338px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 32px auto 0;
     position: relative;
   }
 
