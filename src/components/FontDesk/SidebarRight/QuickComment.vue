@@ -48,7 +48,7 @@
   }
 
   .input {
-    width: 196px;
+    width: 8rem;
     height: 24px;
     border-radius: 5px;
     border: 2px solid deepskyblue;

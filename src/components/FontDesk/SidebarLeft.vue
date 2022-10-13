@@ -13,17 +13,12 @@
   export default {
     name: "SidebarLeft",
     components: {BlogRunningTime, LinkList, UserCard},
-    mounted() {
-      // document.getElementById("SidebarLeft").style.marginLeft = `${innerWidth * 0.15}px`
-    }
   }
 </script>
 
 <style scoped>
   #SidebarLeft {
-    /*width: 260px;*/
     display: inline-block;
-    /*float: left;*/
     flex: 1;
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="UserCard">
-    <img src="https://i.postimg.cc/3wZw7rM6/avatar.jpg" id="avatar" alt="ERROR">
+    <img src="images/avatar.jpg" id="avatar" alt="ERROR">
     <p id="username">WhiteLeaf03</p>
     <p id="introduce">一枚渣渣程序员</p>
   </div>
@@ -36,7 +36,7 @@
     font-family: 包圆小白体, fangsong, serif;
     height: 54px;
     line-height: 54px;
-    font-size: 30px;
+    font-size: 1rem;
     font-weight: bolder;
     vertical-align: middle;
   }
