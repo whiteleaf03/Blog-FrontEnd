@@ -30,6 +30,7 @@
   body {
     background-size: cover;
     position: relative;
+    background-attachment:fixed
   }
 
   @font-face {
