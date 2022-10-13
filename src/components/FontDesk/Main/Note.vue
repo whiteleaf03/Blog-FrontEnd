@@ -48,6 +48,38 @@
         </div>
       </router-link>
     </div>
+    <div class="Note-Item">
+      <router-link to="">
+        <div class="Note-Info">
+          <div class="Note-Avatar"></div>
+          <div style="display: flex; flex-direction: column">
+            <div class="Note-Author">WhiteLeaf03</div>
+            <div class="Note-Date">2022-01-01</div>
+          </div>
+        </div>
+        <div class="Note-Main">
+          <div class="Note-Cover"></div>
+          <div class="Note-Title">测试用标题114514</div>
+          <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
+        </div>
+      </router-link>
+    </div>
+    <div class="Note-Item">
+      <router-link to="">
+        <div class="Note-Info">
+          <div class="Note-Avatar"></div>
+          <div style="display: flex; flex-direction: column">
+            <div class="Note-Author">WhiteLeaf03</div>
+            <div class="Note-Date">2022-01-01</div>
+          </div>
+        </div>
+        <div class="Note-Main">
+          <div class="Note-Cover"></div>
+          <div class="Note-Title">测试用标题114514</div>
+          <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
+        </div>
+      </router-link>
+    </div>
     <div id="Note-End" class="Note-Item">
       到底啦~
     </div>
@@ -110,6 +142,8 @@
     display: flex;
     flex-direction: column;
     height: 296px;
+    border: 1px rgba(200, 200, 200) solid;
+    border-radius: 5px;
   }
 
   .Note-Cover {
@@ -122,6 +156,7 @@
     flex: 3;
     font-family: 包圆小白体, fangsong;
     font-size: 56px;
+    padding: 0 32px;
   }
 
   .Note-Title:hover {
@@ -132,6 +167,7 @@
     font-size: medium;
     font-family: Tanugo糖果手写体, fangsong;
     flex: 1;
+    padding: 0 32px;
   }
 
   a, a:visited {
