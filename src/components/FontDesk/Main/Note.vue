@@ -69,11 +69,15 @@
   }
 
   .Note-Item {
-    background-color: rgba(245, 245, 245, 0.5);
+    background-color: rgba(245, 245, 245);
     padding: 16px;
-    box-shadow: 0 0 10px 2px gray;
     border-radius: 5px;
     margin-bottom: 32px;
+  }
+
+  .Note-Item:hover {
+    box-shadow: 0 0 10px 2px gray;
+    color: #42a1ff;
   }
 
   .Note-Info {
@@ -93,7 +97,6 @@
 
   .Note-Author {
     font-family: Tanugo糖果手写体, fangsong;
-    /*font-size: 16px;*/
     flex: 1;
   }
 
@@ -119,6 +122,10 @@
     flex: 3;
     font-family: 包圆小白体, fangsong;
     font-size: 56px;
+  }
+
+  .Note-Title:hover {
+
   }
 
   .Note-Subtitle {
