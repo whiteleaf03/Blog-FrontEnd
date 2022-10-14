@@ -1,5 +1,5 @@
 <template>
-  <div id="BDNote">
+  <div id="BSNote">
     <div style="border: 1px solid #ccc">
       <Toolbar
           style="border-bottom: 1px solid #ccc"
@@ -25,7 +25,7 @@
   import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 
   export default {
-    name: "BDNote",
+    name: "BSNote",
     components: { Editor, Toolbar },
     setup() {
       // 编辑器实例，必须用 shallowRef

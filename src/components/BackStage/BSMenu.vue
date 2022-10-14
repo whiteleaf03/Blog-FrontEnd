@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul id="BDMenu">
+    <ul id="BSMenu">
       <li><div id="title">风之屿</div></li>
       <li><div><router-link to="/admin/analysis"><div class="li">数据分析</div></router-link></div></li>
       <li><div><router-link to="/admin/note"><div class="li">笔记管理</div></router-link></div></li>
@@ -15,15 +15,15 @@
 
 <script>
   export default {
-    name: "BDMenu",
+    name: "BSMenu",
     mounted() {
-      document.getElementById('BDMenu').style.height = `${innerHeight}px`
+      document.getElementById('BSMenu').style.height = `${innerHeight}px`
     }
   }
 </script>
 
 <style scoped>
-  #BDMenu {
+  #BSMenu {
     border-right: 3px gold solid;
     border-left: 3px gold solid;
     background-color: rgba(245, 245, 245, 0.5);

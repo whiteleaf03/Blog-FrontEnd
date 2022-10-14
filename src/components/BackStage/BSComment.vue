@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    name: "BDComment"
+    name: "BSComment"
   }
 </script>
 

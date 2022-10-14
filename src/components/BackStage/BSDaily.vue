@@ -1,10 +1,10 @@
 <template>
-
+  网站日记管理
 </template>
 
 <script>
   export default {
-    name: "BDEihei"
+    name: "BSDaily"
   }
 </script>
 

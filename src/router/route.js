@@ -1,17 +1,17 @@
-import Home from '../components/FontDesk/Main/Home'
-import Note from "../components/FontDesk/Main/Note";
-import Saysay from "../components/FontDesk/Main/Saysay";
-import Message from "../components/FontDesk/Main/Message";
-import Eihei from "../components/FontDesk/Main/Eihei";
+import Home from '../components/FrontDesk/Main/Home'
+import Note from "../components/FrontDesk/Main/Note";
+import Saysay from "../components/FrontDesk/Main/Saysay";
+import Message from "../components/FrontDesk/Main/Message";
+import Eihei from "../components/FrontDesk/Main/Eihei";
 import Login from "../components/Login";
-import FontDesk from "../components/FontDesk";
-import BackDesk from "../components/BackDesk";
-import BDAnalysis from "../components/BackDesk/BDAnalysis";
-import BDSaysay from "../components/BackDesk/BDSaysay";
-import BDDaily from "../components/BackDesk/BDDaily";
-import BDComment from "../components/BackDesk/BDComment";
-import BDNote from "../components/BackDesk/BDNote";
-import BDEihei from "../components/BackDesk/BDEihei";
+import FontDesk from "../components/FrontDesk";
+import BackDesk from "../components/BackStage";
+import BSAnalysis from "../components/BackStage/BSAnalysis";
+import BSSaysay from "../components/BackStage/BSSaysay";
+import BSDaily from "../components/BackStage/BSDaily";
+import BSComment from "../components/BackStage/BSComment";
+import BSNote from "../components/BackStage/BSNote";
+import BSEihei from "../components/BackStage/BSEihei";
 
 export const routes = [
     {
@@ -52,27 +52,27 @@ export const routes = [
         children: [
             {
                 path: '/admin/analysis',
-                component: BDAnalysis
+                component: BSAnalysis
             },
             {
                 path: '/admin/note',
-                component: BDNote
+                component: BSNote
             },
             {
                 path: '/admin/saysay',
-                component: BDSaysay
+                component: BSSaysay
             },
             {
                 path: '/admin/daily',
-                component: BDDaily
+                component: BSDaily
             },
             {
                 path: '/admin/comment',
-                component: BDComment
+                component: BSComment
             },
             {
                 path: '/admin/eihei',
-                component: BDEihei
+                component: BSEihei
             }
         ]
     }

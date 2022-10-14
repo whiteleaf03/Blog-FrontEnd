@@ -1,10 +1,10 @@
 <template>
-  网站日记管理
+  网站说说管理
 </template>
 
 <script>
   export default {
-    name: "BDDaily"
+    name: "BSSaysay"
   }
 </script>
 

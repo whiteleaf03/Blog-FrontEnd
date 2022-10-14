@@ -1,5 +1,5 @@
 <template>
-  <div id="FontDesk">
+  <div id="FrontDesk">
     <Menu></Menu>
     <div id="MainArea">
       <div style="flex: 1"></div>
@@ -15,18 +15,18 @@
 </template>
 
 <script>
-  import Menu from "./FontDesk/Menu";
-  import SidebarLeft from "./FontDesk/SidebarLeft";
-  import Content from "./FontDesk/Content";
-  import SideBarRight from "./FontDesk/SidebarRight";
+  import Menu from "./FrontDesk/Menu";
+  import SidebarLeft from "./FrontDesk/SidebarLeft";
+  import Content from "./FrontDesk/Content";
+  import SideBarRight from "./FrontDesk/SidebarRight";
   export default {
-    name: "FontDesk",
+    name: "FrontDesk",
     components: {Content, SidebarLeft, SideBarRight, Menu}
   }
 </script>
 
 <style scoped>
-  #FontDesk {
+  #FrontDesk {
     /*position: absolute;*/
   }
 
