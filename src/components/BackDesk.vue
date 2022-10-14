@@ -1,15 +1,15 @@
 <template>
   <div id="BackDesk">
-    <div style="flex: 1"><Menu></Menu></div>
+    <div style="flex: 1"><BDMenu></BDMenu></div>
     <div id="BDMain"><router-view></router-view></div>
   </div>
 </template>
 
 <script>
-  import Menu from "./BackDesk/BDMenu";
+  import BDMenu from "./BackDesk/BDMenu";
   export default {
     name: "BackDesk",
-    components: {Menu},
+    components: {BDMenu},
     mounted() {
       document.getElementById('BDMain').style.height = `${innerHeight * 0.8}px`
       document.getElementById('BDMain').style.width = `${innerWidth * 0.8}px`

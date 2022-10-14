@@ -1,27 +1,29 @@
 <template>
   <div>
-    <ul id="SideMenu">
+    <ul id="BDMenu">
       <li><div id="title">风之屿</div></li>
       <li><div><router-link to="/admin/analysis"><div class="li">数据分析</div></router-link></div></li>
       <li><div><router-link to="/admin/note"><div class="li">笔记管理</div></router-link></div></li>
       <li><div><router-link to="/admin/saysay"><div class="li">说说管理</div></router-link></div></li>
       <li><div><router-link to="/admin/daily"><div class="li">日记管理</div></router-link></div></li>
       <li><div><router-link to="/admin/comment"><div class="li">留言管理</div></router-link></div></li>
+      <li><div><router-link to="/admin/eihei"><div class="li">诶嘿</div></router-link></div></li>
+      <li id="backHome"><div><router-link to="/home"><div class="li">回到首页</div></router-link></div></li>
     </ul>
   </div>
 </template>
 
 <script>
   export default {
-    name: "Menu",
+    name: "BDMenu",
     mounted() {
-      document.getElementById('SideMenu').style.height = `${innerHeight}px`
+      document.getElementById('BDMenu').style.height = `${innerHeight}px`
     }
   }
 </script>
 
 <style scoped>
-  #SideMenu {
+  #BDMenu {
     border-right: 3px gold solid;
     border-left: 3px gold solid;
     background-color: rgba(245, 245, 245, 0.5);
@@ -56,5 +58,11 @@
   a, a:visited {
     text-decoration: none;
     color: black;
+  }
+
+  #backHome {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 </style>
