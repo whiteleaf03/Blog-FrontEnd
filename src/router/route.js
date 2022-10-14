@@ -11,6 +11,7 @@ import BDSaysay from "../components/BackDesk/BDSaysay";
 import BDDaily from "../components/BackDesk/BDDaily";
 import BDComment from "../components/BackDesk/BDComment";
 import BDNote from "../components/BackDesk/BDNote";
+import BDEihei from "../components/BackDesk/BDEihei";
 
 export const routes = [
     {
@@ -68,6 +69,10 @@ export const routes = [
             {
                 path: '/admin/comment',
                 component: BDComment
+            },
+            {
+                path: '/admin/eihei',
+                component: BDEihei
             }
         ]
     }
