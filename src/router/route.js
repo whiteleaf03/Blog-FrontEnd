@@ -4,7 +4,7 @@ import Saysay from "../components/FrontDesk/Main/Saysay";
 import Message from "../components/FrontDesk/Main/Message";
 import Eihei from "../components/FrontDesk/Main/Eihei";
 import Login from "../components/Login";
-import FontDesk from "../components/FrontDesk";
+import FrontDesk from "../components/FrontDesk";
 import BackDesk from "../components/BackStage";
 import BSAnalysis from "../components/BackStage/BSAnalysis";
 import BSSaysay from "../components/BackStage/BSSaysay";
@@ -16,7 +16,7 @@ import BSEihei from "../components/BackStage/BSEihei";
 export const routes = [
     {
         path: '/',
-        component: FontDesk,
+        component: FrontDesk,
         redirect: '/home',
         children: [
             {

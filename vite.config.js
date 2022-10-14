@@ -28,6 +28,6 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'Blog-FontEnd'
+    outDir: 'Blog-FrontEnd'
   }
 })
