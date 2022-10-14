@@ -110,7 +110,7 @@
   }
 
   #Note-Search p,#Note-Search p:hover  {
-    flex: 1;
+    width: 80px;
     line-height: 34px;
     color: black;
   }
