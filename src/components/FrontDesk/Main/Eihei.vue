@@ -5,11 +5,10 @@
       <div id="Recommend-banner">
         <el-carousel height="400px" indicator-position="outside">
           <el-carousel-item><a :href="this.url"><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
-          <el-carousel-item><a href=""><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
-          <el-carousel-item><a href=""><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
-          <el-carousel-item><a href=""><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
-          <el-carousel-item><a href=""><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
-          <el-carousel-item><a href=""><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
+          <el-carousel-item><a :href="this.url"><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
+          <el-carousel-item><a :href="this.url"><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
+          <el-carousel-item><a :href="this.url"><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
+          <el-carousel-item><a :href="this.url"><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
         </el-carousel>
       </div>
     </div>
