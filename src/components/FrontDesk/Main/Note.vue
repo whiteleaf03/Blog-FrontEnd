@@ -3,7 +3,7 @@
     <div id="Note-Search" class="Note-Item">
       <p>搜索文章</p>
       <input placeholder="未来可期">
-      <button><img src="images/icon/搜索_search.png"></button>
+      <button><img src="/images/icon/搜索_search.png"></button>
     </div>
     <div class="Note-Item">
       <router-link to="">
