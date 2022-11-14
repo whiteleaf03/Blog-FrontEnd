@@ -5,85 +5,33 @@
       <input placeholder="未来可期">
       <button><img src="/images/icon/搜索_search.png"></button>
     </div>
-    <div class="Note-Item">
-      <router-link to="">
-        <div class="Note-Info">
-          <div class="Note-Avatar"></div>
-          <div style="display: flex; flex-direction: column">
-            <div class="Note-Author">WhiteLeaf03</div>
-            <div class="Note-Date">2022-01-01</div>
-          </div>
+    <div class="Note-Item" @click="goToNote(0)">
+      <div class="Note-Info">
+        <div class="Note-Avatar"></div>
+        <div style="display: flex; flex-direction: column">
+          <div class="Note-Author">WhiteLeaf03</div>
+          <div class="Note-Date">2022-01-01</div>
         </div>
-        <div class="Note-Main">
-          <div class="Note-Cover"></div>
-          <div class="Note-Title">测试用标题114514</div>
-          <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
-        </div>
-      </router-link>
+      </div>
+      <div class="Note-Main">
+        <div class="Note-Cover"></div>
+        <div class="Note-Title">测试用标题114514</div>
+        <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
+      </div>
     </div>
-    <div class="Note-Item">
-      <router-link to="">
-        <div class="Note-Info">
-          <div class="Note-Avatar"></div>
-          <div style="display: flex; flex-direction: column">
-            <div class="Note-Author">WhiteLeaf03</div>
-            <div class="Note-Date">2022-01-01</div>
-          </div>
+    <div class="Note-Item" v-for="note in this.noteList" @click="this.goToNote(1)">
+      <div class="Note-Info">
+        <div class="Note-Avatar"></div>
+        <div style="display: flex; flex-direction: column">
+          <div class="Note-Author">WhiteLeaf03</div>
+          <div class="Note-Date">{{note.date}}</div>
         </div>
-        <div class="Note-Main">
-          <div class="Note-Cover"></div>
-          <div class="Note-Title">测试用标题114514</div>
-          <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
-        </div>
-      </router-link>
-    </div>
-    <div class="Note-Item">
-      <router-link to="">
-        <div class="Note-Info">
-          <div class="Note-Avatar"></div>
-          <div style="display: flex; flex-direction: column">
-            <div class="Note-Author">WhiteLeaf03</div>
-            <div class="Note-Date">2022-01-01</div>
-          </div>
-        </div>
-        <div class="Note-Main">
-          <div class="Note-Cover"></div>
-          <div class="Note-Title">测试用标题114514</div>
-          <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
-        </div>
-      </router-link>
-    </div>
-    <div class="Note-Item">
-      <router-link to="">
-        <div class="Note-Info">
-          <div class="Note-Avatar"></div>
-          <div style="display: flex; flex-direction: column">
-            <div class="Note-Author">WhiteLeaf03</div>
-            <div class="Note-Date">2022-01-01</div>
-          </div>
-        </div>
-        <div class="Note-Main">
-          <div class="Note-Cover"></div>
-          <div class="Note-Title">测试用标题114514</div>
-          <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
-        </div>
-      </router-link>
-    </div>
-    <div class="Note-Item">
-      <router-link to="">
-        <div class="Note-Info">
-          <div class="Note-Avatar"></div>
-          <div style="display: flex; flex-direction: column">
-            <div class="Note-Author">WhiteLeaf03</div>
-            <div class="Note-Date">2022-01-01</div>
-          </div>
-        </div>
-        <div class="Note-Main">
-          <div class="Note-Cover"></div>
-          <div class="Note-Title">测试用标题114514</div>
-          <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
-        </div>
-      </router-link>
+      </div>
+      <div class="Note-Main">
+        <div class="Note-Cover"></div>
+        <div class="Note-Title">{{note.title}}</div>
+        <div class="Note-Subtitle">{{note.subTitle}}</div>
+      </div>
     </div>
     <div id="Note-End" class="Note-Item">
       到底啦~
@@ -94,8 +42,19 @@
 <script>
   export default {
     name: 'Note',
-    mounted() {
-
+    data() {
+      return {
+        noteList: [{
+          title: '测试',
+          subTitle: '测试',
+          date: '2022-01-01',
+        }]
+      }
+    },
+    methods: {
+      goToNote(id) {
+        this.$router.push(`/note/${id}`)
+      }
     }
   }
 </script>

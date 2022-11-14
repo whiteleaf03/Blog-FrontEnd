@@ -2,26 +2,32 @@
   <div id="QuickComment">
     <p id="title">给我留言吧</p>
     <p class="tips">昵称*</p>
-    <input v-model="username" class="input">
+    <input v-model="nickname" class="input">
     <p class="tips">邮箱</p>
     <input v-model="email" placeholder="非必填，审核通过后发送邮件通知" class="input">
     <p class="tips">留言*</p>
-    <textarea v-model="comment" class="input" style="resize: none; height: 96px"></textarea>
+    <textarea v-model="text" class="input" style="resize: none; height: 96px"></textarea>
     <div  id="button">
-      <button>提&nbsp;&nbsp;交</button>
+      <button @click="submitComment">提&nbsp;&nbsp;交</button>
     </div>
   </div>
 </template>
 
 <script>
+  import {postComment} from "../../../request/FontDeskRequest.js";
+
   export default {
     name: "QuickComment",
     data() {
       return {
-        username: '',
+        nickname: '',
         email: '',
-        password: '',
         comment: ''
+      }
+    },
+    methods: {
+      async submitComment() {
+        await postComment(this.nickname, this.email, this.text, Date.now())
       }
     }
   }

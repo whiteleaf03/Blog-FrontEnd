@@ -25,7 +25,13 @@ export const routes = [
             },
             {
                 path: '/note',
-                component: Note
+                component: Note,
+                children: [
+                    {
+                        path: '/note/:id',
+                        component: Note
+                    }
+                ]
             },
             {
                 path: '/saysay',

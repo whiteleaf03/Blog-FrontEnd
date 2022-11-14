@@ -1,16 +1,27 @@
 <template>
   <div id="Chunibyou">
-    <p>{{ sentence }}</p>
+    <p>&nbsp;&nbsp;{{ sentence }}</p>
   </div>
 </template>
 
 <script>
+  import {getChunibyou} from "../../../request/FontDeskRequest.js";
+
   export default {
     name: "Chunibyou",
     data() {
       return {
         sentence: 'Something Bad Happen!'
       }
+    },
+    methods: {
+      async init() {
+        let result = await getChunibyou()
+        this.sentence = result.data.text
+      }
+    },
+    mounted() {
+      this.init()
     }
   }
 </script>
