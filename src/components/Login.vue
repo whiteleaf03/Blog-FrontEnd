@@ -23,6 +23,9 @@
 </template>
 
 <script>
+  import {login} from "../request/BackDeskRequest.js";
+  import {setCookie} from "../utils.js";
+
   export default {
     name: "Login",
     data() {
@@ -34,7 +37,14 @@
     },
     methods: {
       async login() {
-        this.$router.push('/admin')
+        let result = await login(this.username, this.password)
+        if (result.status === 0 && result.msg === '登录成功') {
+          //登录成功
+          setCookie('token', result.data.token, -1)
+          this.$router.push('/admin')
+        } else {
+          alert(result.msg)
+        }
       }
     }
   }
