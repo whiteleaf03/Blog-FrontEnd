@@ -44,6 +44,7 @@
           result.data[index].date = tsToDate(result.data[index].date)
         }
         this.saysayList = result.data.reverse()
+        this.sum = this.saysayList.length
         console.log(document.getElementsByClassName('avatar'))
       }
     }
@@ -73,7 +74,6 @@
   }
 
   .avatar {
-    flex: 1;
     background-image: url("images/avatar.jpg");
     background-size: cover;
     border-radius: 5000px;
