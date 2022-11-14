@@ -1,24 +1,24 @@
 <template>
   <div id="Login">
-    <div id="title">风 起 地</div>
-    <div class="line">
-      <div class="tips">用户名</div>
-      <div class="input"><input v-model="username" type="text"></div>
-    </div>
-    <div class="line">
-      <div class="tips">密码</div>
-      <div class="input"><input v-model="password" type="password"></div>
-    </div>
-    <div class="line">
-      <div style="width: 360px; text-align: center">
-        <input class="button" type="button" value="can can need" v-on:click="login">
+    <div style="flex: 1"></div>
+    <div style="display: flex;flex-direction: column; flex: 1">
+      <div style="flex: 1"></div>
+      <div id="Login-bg">
+        <div id="Login-title">用户登录</div>
+        <div id="Login-input">
+          <div class="tips">用户名</div>
+          <div class="input"><input v-model="username" type="text"></div>
+          <div class="tips">密码</div>
+          <div class="input"><input v-model="password" type="password"></div>
+        </div>
+        <div id="Login-button">
+          <button @click="login">登&nbsp;&nbsp;&nbsp;录</button>
+        </div>
       </div>
+      <div style="flex: 2"></div>
     </div>
-    <div class="line">
-      <div style="width: 360px; text-align: center">
-        <router-link to="/home"><input class="button" type="button" value="愿风神忽悠你"></router-link>
-      </div>
-    </div>
+
+    <div style="flex: 1"></div>
   </div>
 </template>
 
@@ -35,6 +35,9 @@
         valid: ''
       }
     },
+    mounted() {
+      document.getElementById('Login').style.height = `${innerHeight}px`
+    },
     methods: {
       async login() {
         let result = await login(this.username, this.password)
@@ -50,44 +53,81 @@
   }
 </script>
 
-<style scoped>
+<style>
   #Login {
-    backdrop-filter: blur(25px);
-    width: 640px;
-    height: auto;
-    margin: 120px auto 0;
-    border: 3px gold solid;
+    display: flex;
+    width: 100%;
+    height: complex;
+  }
+
+  #Login-bg {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    border: 1px gold solid;
     border-radius: 15px;
   }
 
-  #title {
+  #Login-title {
+    flex: 1;
     text-align: center;
+    font-family: 包圆小白体, fangsong;
     font-size: 56px;
-    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #Login-input {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 128px;
+  }
+
+  .tips {
+    text-align: left;
+    font-size: 32px;
+    width: 100%;
     font-family: 包圆小白体, fangsong;
   }
 
-  .line {
-    margin: 32px auto;
-    width: 360px;
-    font-family: Tanugo糖果手写体, fangsong;
+  .input {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    margin: 8px 0;
   }
 
-  input {
-    width: 360px;
+  .input input {
+    border: none;
     border-radius: 5px;
-    border: 1px solid black;
+    width: 100%;
     padding: 6px;
-    font-family: Tanugo糖果手写体, fangsong;
+    font-size: larger;
   }
 
-  input:focus {
-    outline: 1px solid black;
+  .input input:focus {
+    outline: 2px solid cornflowerblue;
   }
 
-  .button {
-    width: 180px;
-    margin: 0px auto 0;
-    font-family: 阿里巴巴普惠体-regular, fangsong;
+  #Login-button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #Login-button button {
+    width: 30%;
+    height: 40%;
+    background: rgba(245, 245, 245, 0.3);
+    border: 1px solid #42a1ff;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: 包圆小白体, fangsong;
   }
 </style>
