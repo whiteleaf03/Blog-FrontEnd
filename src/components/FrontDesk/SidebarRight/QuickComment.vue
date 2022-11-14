@@ -1,12 +1,15 @@
 <template>
   <div id="QuickComment">
     <p id="title">给我留言吧</p>
-    <p class="tips">昵称</p>
+    <p class="tips">昵称*</p>
     <input v-model="username" class="input">
     <p class="tips">邮箱</p>
     <input v-model="email" placeholder="非必填，审核通过后发送邮件通知" class="input">
-    <p class="tips">留言</p>
+    <p class="tips">留言*</p>
     <textarea v-model="comment" class="input" style="resize: none; height: 96px"></textarea>
+    <div  id="button">
+      <button>提&nbsp;&nbsp;交</button>
+    </div>
   </div>
 </template>
 
@@ -51,8 +54,8 @@
   }
 
   .input {
-    width: ;
-    height: 24px;
+    width: auto;
+    justify-content: center;
     border-radius: 5px;
     border: 2px solid deepskyblue;
     outline: none;
@@ -65,5 +68,24 @@
     outline: none;
     background-color: white;
     border: 2px solid #0080ff;
+  }
+
+  #button {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #button button {
+    width: 60%;
+    margin-top: 12px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid deepskyblue;
+    padding: 6px 0;
+  }
+
+  #button button:active {
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2), 0 17px 50px 0 rgba(0,0,0,0.2);
   }
 </style>
