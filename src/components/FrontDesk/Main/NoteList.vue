@@ -114,6 +114,7 @@
   .Note-Author {
     font-family: Tanugo糖果手写体, fangsong;
     flex: 1;
+    font-size: x-large;
   }
 
   .Note-Date {
@@ -143,7 +144,7 @@
   }
 
   .Note-Title {
-    flex: 3;
+    flex: 2;
     font-family: 包圆小白体, fangsong;
     font-size: 56px;
     padding: 0 32px;
@@ -154,7 +155,7 @@
   }
 
   .Note-Subtitle {
-    font-size: medium;
+    font-size: large;
     font-family: Tanugo糖果手写体, fangsong;
     flex: 1;
     padding: 0 32px;

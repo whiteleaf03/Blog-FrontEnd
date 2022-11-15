@@ -80,3 +80,17 @@ export async function getRecommand() {
     })
     return result;
 }
+
+export async function getAnalysis() {
+    let result;
+    await axios({
+        url: '/fd/api/analysis',
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then((response) => {
+        result = response.data;
+    })
+    return result
+}
