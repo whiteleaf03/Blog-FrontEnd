@@ -52,7 +52,8 @@
   }
 
   .li {
-    font-family: Tanugo糖果手写体, fangsong;
+    font-family: 包圆小白体, fangsong;
+    font-size: x-large;
   }
 
   a, a:visited {
