@@ -52,3 +52,17 @@ export async function getSaysay() {
     })
     return result;
 }
+
+export async function getMessage() {
+    let result;
+    await axios({
+        url: '/fd/api/comment',
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then((response) => {
+        result = response.data;
+    })
+    return result;
+}
