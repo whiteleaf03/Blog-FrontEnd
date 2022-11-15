@@ -1,6 +1,6 @@
 <template>
   <div id="UserCard">
-    <img src="images/avatar.jpg" id="avatar" alt="ERROR">
+    <img src="/images/avatar.jpg" id="avatar" alt="ERROR">
     <p id="username">WhiteLeaf03</p>
     <p id="introduce">一枚渣渣程序员</p>
   </div>

@@ -3,22 +3,22 @@
     <div style="flex: 1"></div>
     <ul id="list">
       <li><router-link to="/home">
-        <img src="images/icon/首页_home.png" class="icon"><p>主页</p>
+        <img src="/images/icon/首页_home.png" class="icon"><p>主页</p>
       </router-link></li>
       <li><router-link to="/note">
-        <img src="images/icon/书籍_book.png" class="icon"><p>笔记</p>
+        <img src="/images/icon/书籍_book.png" class="icon"><p>笔记</p>
       </router-link></li>
       <li><router-link to="/saysay">
-        <img src="images/icon/标签_tag-one.png" class="icon"><p>说说</p>
+        <img src="/images/icon/标签_tag-one.png" class="icon"><p>说说</p>
       </router-link></li>
       <li><router-link to="/comment">
-        <img src="images/icon/邮件_mail.png" class="icon"><p>留言</p>
+        <img src="/images/icon/邮件_mail.png" class="icon"><p>留言</p>
       </router-link></li>
       <li><router-link to="/eihei">
         <p>诶嘿ヾ(*ゝω・*)ノ</p>
       </router-link></li>
       <li><router-link to="/login">
-        <img src="images/icon/我的_me.png" class="icon" id="login">
+        <img src="/images/icon/我的_me.png" class="icon" id="login">
       </router-link></li>
     </ul>
     <div style="flex: 1"></div>

@@ -12,6 +12,8 @@ import BSDaily from "../components/BackStage/BSDaily";
 import BSComment from "../components/BackStage/BSComment";
 import BSNote from "../components/BackStage/BSNote";
 import BSEihei from "../components/BackStage/BSEihei";
+import Note from "../components/FrontDesk/Main/Page/Note.vue";
+import Saysay from "../components/FrontDesk/Main/Page/Saysay.vue";
 
 export const routes = [
     {
@@ -26,16 +28,18 @@ export const routes = [
             {
                 path: '/note',
                 component: NoteList,
-                // children: [
-                //     {
-                //         path: '/note/:id',
-                //         component: Note
-                //     }
-                // ]
+            },
+            {
+                path: '/note/:id',
+                component: Note
             },
             {
                 path: '/saysay',
-                component: SaysayList
+                component: SaysayList,
+            },
+            {
+                path: '/saysay/:id',
+                component: Saysay
             },
             {
                 path: '/comment',

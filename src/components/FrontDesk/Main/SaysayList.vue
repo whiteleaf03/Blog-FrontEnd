@@ -74,7 +74,7 @@
   }
 
   .avatar {
-    background-image: url("images/avatar.jpg");
+    background-image: url("/images/avatar.jpg");
     background-size: cover;
     border-radius: 5000px;
     width: 50px;

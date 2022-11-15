@@ -5,20 +5,6 @@
       <input placeholder="未来可期">
       <button><img src="/images/icon/搜索_search.png"></button>
     </div>
-    <div class="Note-Item" @click="goToNote(0)">
-      <div class="Note-Info">
-        <div class="Note-Avatar"></div>
-        <div style="display: flex; flex-direction: column">
-          <div class="Note-Author">WhiteLeaf03</div>
-          <div class="Note-Date">2022-01-01</div>
-        </div>
-      </div>
-      <div class="Note-Main">
-        <div class="Note-Cover"></div>
-        <div class="Note-Title">测试用标题114514</div>
-        <div class="Note-Subtitle">这么臭的标题真有必要要吗（恼</div>
-      </div>
-    </div>
     <div class="Note-Item" v-for="note in this.noteList" @click="this.goToNote(1)">
       <div class="Note-Info">
         <div class="Note-Avatar"></div>
@@ -113,7 +99,7 @@
   }
 
   .Note-Avatar {
-    background-image: url("images/avatar.jpg");
+    background-image: url("/images/avatar.jpg");
     background-size: cover;
     border-radius: 50px;
     width: 54px;
@@ -143,7 +129,7 @@
 
   .Note-Cover {
     flex: 6;
-    background-image: url("images/background/20.jpg");
+    background-image: url("/images/background/20.jpg");
     background-size: cover;
   }
 
