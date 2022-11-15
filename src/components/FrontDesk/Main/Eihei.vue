@@ -11,7 +11,7 @@
       </div>
       <div><a class="Recommend-line" :href="this.url">
         <div style="flex: 3"></div>
-        <img class="Recommend-line-img" src="images/test/Recommend-001.png">
+        <img class="Recommend-line-img" src="/images/test/Recommend-001.png">
         <div style="flex: 2"></div>
         <div class="Recommend-line-info">
           <div class="Recommend-line-title">如果突然想起我</div>
@@ -21,7 +21,7 @@
       </a></div>
       <div><a class="Recommend-line" :href="this.url">
         <div style="flex: 3"></div>
-        <img class="Recommend-line-img" src="images/test/Recommend-001.png">
+        <img class="Recommend-line-img" src="/images/test/Recommend-001.png">
         <div style="flex: 2"></div>
         <div class="Recommend-line-info">
           <div class="Recommend-line-title">如果突然想起我</div>
@@ -31,7 +31,7 @@
       </a></div>
       <div><a class="Recommend-line" :href="this.url">
         <div style="flex: 3"></div>
-        <img class="Recommend-line-img" src="images/test/Recommend-001.png">
+        <img class="Recommend-line-img" src="/images/test/Recommend-001.png">
         <div style="flex: 2"></div>
         <div class="Recommend-line-info">
           <div class="Recommend-line-title">如果突然想起我</div>
@@ -83,7 +83,7 @@
   .banner-image {
     height: 400px;
     position: relative;
-    background-image: url("images/test/Recommend-001.png");
+    background-image: url("/images/test/Recommend-001.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
