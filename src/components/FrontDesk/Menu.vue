@@ -11,7 +11,7 @@
       <li><router-link to="/saysay">
         <img src="images/icon/标签_tag-one.png" class="icon"><p>说说</p>
       </router-link></li>
-      <li><router-link to="/message">
+      <li><router-link to="/comment">
         <img src="images/icon/邮件_mail.png" class="icon"><p>留言</p>
       </router-link></li>
       <li><router-link to="/eihei">

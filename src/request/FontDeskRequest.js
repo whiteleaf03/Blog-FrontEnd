@@ -53,7 +53,7 @@ export async function getSaysay() {
     return result;
 }
 
-export async function getMessage() {
+export async function getComment() {
     let result;
     await axios({
         url: '/fd/api/comment',

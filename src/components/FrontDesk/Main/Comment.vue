@@ -1,5 +1,5 @@
 <template>
-  <div id="Message">
+  <div id="Comment">
     <div id="title">留&nbsp;言&nbsp;墙</div>
     <div id="waterfall">
       <div class="waterfall">
@@ -31,11 +31,11 @@
 </template>
 
 <script>
-  import {getMessage} from "../../../request/FontDeskRequest.js";
+import {getComment} from "../../../request/FontDeskRequest.js";
   import {tsToDate} from "../../../utils.js";
 
   export default {
-    name: 'Message',
+    name: 'Comment',
     data() {
       return {
         messageListLeft: [],
@@ -48,7 +48,7 @@
     },
     methods: {
       async init() {
-        let result = await getMessage()
+        let result = await getComment()
         console.log(result)
         let i = 0
         for (let index in result.data) {

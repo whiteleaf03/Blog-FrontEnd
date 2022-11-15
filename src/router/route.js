@@ -1,7 +1,7 @@
 import Home from '../components/FrontDesk/Main/Home'
 import Note from "../components/FrontDesk/Main/Note";
 import Saysay from "../components/FrontDesk/Main/Saysay";
-import Message from "../components/FrontDesk/Main/Message";
+import Comment from "../components/FrontDesk/Main/Comment.vue";
 import Eihei from "../components/FrontDesk/Main/Eihei";
 import Login from "../components/Login";
 import FrontDesk from "../components/FrontDesk";
@@ -26,20 +26,20 @@ export const routes = [
             {
                 path: '/note',
                 component: Note,
-                children: [
-                    {
-                        path: '/note/:id',
-                        component: Note
-                    }
-                ]
+                // children: [
+                //     {
+                //         path: '/note/:id',
+                //         component: Note
+                //     }
+                // ]
             },
             {
                 path: '/saysay',
                 component: Saysay
             },
             {
-                path: '/message',
-                component: Message
+                path: '/comment',
+                component: Comment
             },
             {
                 path: '/eihei',
