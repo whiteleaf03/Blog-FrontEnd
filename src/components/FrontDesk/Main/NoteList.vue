@@ -14,7 +14,9 @@
         </div>
       </div>
       <div class="Note-Main">
-        <div class="Note-Cover"></div>
+        <div class="Note-Cover">
+          <img :src="note.coverPath">
+        </div>
         <div class="Note-Title">{{note.title}}</div>
         <div class="Note-Subtitle">{{note.subTitle}}</div>
       </div>
@@ -34,6 +36,7 @@
           title: '测试',
           subTitle: '测试',
           date: '2022-01-01',
+          coverPath: '/images/background/17.jpg'
         }]
       }
     },
@@ -129,8 +132,14 @@
 
   .Note-Cover {
     flex: 6;
-    background-image: url("/images/background/20.jpg");
-    background-size: cover;
+    height: 50%;
+  }
+
+  .Note-Cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
   }
 
   .Note-Title {
