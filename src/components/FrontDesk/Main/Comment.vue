@@ -3,27 +3,27 @@
     <div id="title">留&nbsp;言&nbsp;墙</div>
     <div id="waterfall">
       <div class="waterfall">
-        <div class="message-item" v-for="message in this.messageListLeft">
-          <div class="nickname">{{message.nickname}}</div>
-          <div class="date">{{message.date}}</div>
+        <div class="comment-item" v-for="comment in this.commentListLeft">
+          <div class="nickname">{{comment.nickname}}</div>
+          <div class="date">{{comment.date}}</div>
           <div style="height: 16px"></div>
-          <div class="message">{{message.text}}</div>
+          <div class="comment">{{comment.text}}</div>
         </div>
       </div>
       <div id="middle" class="waterfall">
-        <div class="message-item" v-for="message in this.messageListMiddle">
-          <div class="nickname">{{message.nickname}}</div>
-          <div class="date">{{message.date}}</div>
+        <div class="comment-item" v-for="comment in this.commentListMiddle">
+          <div class="nickname">{{comment.nickname}}</div>
+          <div class="date">{{comment.date}}</div>
           <div style="height: 16px"></div>
-          <div class="message">{{message.text}}</div>
+          <div class="comment">{{comment.text}}</div>
         </div>
       </div>
       <div class="waterfall">
-        <div class="message-item" v-for="message in this.messageListRight">
-          <div class="nickname">{{message.nickname}}</div>
-          <div class="date">{{message.date}}</div>
+        <div class="comment-item" v-for="comment in this.commentListRight">
+          <div class="nickname">{{comment.nickname}}</div>
+          <div class="date">{{comment.date}}</div>
           <div style="height: 16px"></div>
-          <div class="message">{{message.text}}</div>
+          <div class="comment">{{comment.text}}</div>
         </div>
       </div>
     </div>
@@ -38,9 +38,9 @@ import {getComment} from "../../../request/FontDeskRequest.js";
     name: 'Comment',
     data() {
       return {
-        messageListLeft: [],
-        messageListMiddle: [],
-        messageListRight: []
+        commentListLeft: [],
+        commentListMiddle: [],
+        commentListRight: []
       }
     },
     mounted() {
@@ -54,29 +54,29 @@ import {getComment} from "../../../request/FontDeskRequest.js";
         for (let index in result.data) {
           result.data[index].date = tsToDate(result.data[index].date)
           if (i === 0) {
-            this.messageListLeft.push(result.data[index])
+            this.commentListLeft.push(result.data[index])
             console.log('左列')
             i = 1
           } else if (i === 1) {
-            this.messageListMiddle.push(result.data[index])
+            this.commentListMiddle.push(result.data[index])
             console.log('中列')
             i = 2
           } else {
-            this.messageListRight.push(result.data[index])
+            this.commentListRight.push(result.data[index])
             console.log('右列')
             i = 0
           }
         }
-        this.messageListLeft = this.messageListLeft.reverse()
-        this.messageListMiddle = this.messageListMiddle.reverse()
-        this.messageListRight = this.messageListRight.reverse()
+        this.commentListLeft = this.commentListLeft.reverse()
+        this.commentListMiddle = this.commentListMiddle.reverse()
+        this.commentListRight = this.commentListRight.reverse()
       }
     }
   }
 </script>
 
 <style scoped>
-  #Message {
+  #Comment {
     display: flex;
     flex-direction: column;
   }
@@ -104,7 +104,7 @@ import {getComment} from "../../../request/FontDeskRequest.js";
     flex: 1;
   }
 
-  .message-item {
+  .comment-item {
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@ import {getComment} from "../../../request/FontDeskRequest.js";
     font-size: small;
   }
 
-  .message {
+  .comment {
     flex: 3;
   }
 </style>
