@@ -66,3 +66,17 @@ export async function getComment() {
     })
     return result;
 }
+
+export async function getRecommand() {
+    let result;
+    await axios({
+        url: '/fd/api/eihei/recommend',
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then((response) => {
+        result = response.data;
+    })
+    return result;
+}

@@ -4,38 +4,21 @@
       <div id="Recommend-title">站☆长☆推☆荐</div>
       <div id="Recommend-banner">
         <el-carousel height="400px" indicator-position="outside">
-          <el-carousel-item><a :href="this.url"><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
-          <el-carousel-item><a :href="this.url"><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
-          <el-carousel-item><a :href="this.url"><div class="banner-image"><div class="banner-info">[歌曲MV]如果突然想起我</div></div></a></el-carousel-item>
+          <el-carousel-item v-for="banner in this.bannerList">
+            <a :href="banner.resourcePath">
+              <img :src="banner.coverPath" class="banner-image">
+              <div class="banner-info">[{{banner.type}}]{{banner.title}}</div>
+            </a>
+          </el-carousel-item>
         </el-carousel>
       </div>
-      <div><a class="Recommend-line" :href="this.url">
+      <div><a class="Recommend-line" v-for="recommend in this.recommendList" :href="recommend.resourcePath">
         <div style="flex: 3"></div>
-        <img class="Recommend-line-img" src="/images/test/Recommend-001.png">
+        <img class="Recommend-line-img" :src="recommend.coverPath">
         <div style="flex: 2"></div>
         <div class="Recommend-line-info">
-          <div class="Recommend-line-title">如果突然想起我</div>
-          <div class="Recommend-line-subtitle">歌曲MV</div>
-        </div>
-        <div style="flex: 3"></div>
-      </a></div>
-      <div><a class="Recommend-line" :href="this.url">
-        <div style="flex: 3"></div>
-        <img class="Recommend-line-img" src="/images/test/Recommend-001.png">
-        <div style="flex: 2"></div>
-        <div class="Recommend-line-info">
-          <div class="Recommend-line-title">如果突然想起我</div>
-          <div class="Recommend-line-subtitle">歌曲MV</div>
-        </div>
-        <div style="flex: 3"></div>
-      </a></div>
-      <div><a class="Recommend-line" :href="this.url">
-        <div style="flex: 3"></div>
-        <img class="Recommend-line-img" src="/images/test/Recommend-001.png">
-        <div style="flex: 2"></div>
-        <div class="Recommend-line-info">
-          <div class="Recommend-line-title">如果突然想起我</div>
-          <div class="Recommend-line-subtitle">歌曲MV</div>
+          <div class="Recommend-line-title">{{recommend.title}}</div>
+          <div class="Recommend-line-subtitle">{{recommend.type}}</div>
         </div>
         <div style="flex: 3"></div>
       </a></div>
@@ -44,18 +27,31 @@
 </template>
 
 <script>
+  import {getRecommand} from "../../../request/FontDeskRequest.js";
+
   export default {
     name: 'Eihei',
     data() {
       return {
-        url: "www.baidu.com"
+        url: '',
+        bannerList: [],
+        recommendList: []
       }
     },
     mounted() {
-      this.initBanner()
+      this.init()
     },
     methods: {
-      async initBanner() {
+      async init() {
+        let result = await getRecommand()
+        result.data = result.data.reverse()
+        if (result.data.length <= 3) {
+          this.bannerList = result.data
+          console.log('设置完毕')
+        } else {
+          this.bannerList = result.data.slice(0, 3)
+          this.recommendList = result.data.slice(3)
+        }
         let bannerWidth = document.getElementById('Recommend-title').clientWidth
         for (let index in document.getElementsByClassName('banner-image').length) {
           document.getElementsByClassName('banner-image')[index].style.width = `${bannerWidth}px`
@@ -78,14 +74,14 @@
 
   a, a:visited {
     color: black;
+    width: 100%;
+    height: 100%;
   }
 
   .banner-image {
-    height: 400px;
-    position: relative;
-    background-image: url("/images/test/Recommend-001.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
   .banner-info {
@@ -103,12 +99,12 @@
 
   .Recommend-line {
     display: flex;
-    height: 120px;
+    height: 180px;
     margin: 36px 0;
   }
 
   .Recommend-line-img {
-    flex: 5;
+    flex: 7;
   }
 
   .Recommend-line-info {
@@ -119,7 +115,7 @@
 
   .Recommend-line-title {
     font-family: 包圆小白体, fangsong;
-    font-size: 36px;
+    font-size: 24px;
     flex: 3;
   }
 
