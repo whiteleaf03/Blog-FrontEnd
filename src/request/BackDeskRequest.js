@@ -105,3 +105,36 @@ export async function deleteSaysay(id) {
     })
     return result;
 }
+
+export async function getComment() {
+    let result;
+    await axios({
+        url: '/bs/api/comment',
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json',
+            'token': getCookie('token')
+        }
+    }).then((response) => {
+        result = response.data;
+    })
+    return result;
+}
+
+export async function deleteComment(id) {
+    let result;
+    await axios({
+        url: '/bs/api/comment',
+        method: 'delete',
+        headers: {
+            'Content-Type': 'application/json',
+            'token': getCookie('token')
+        },
+        data: JSON.stringify({
+            id: id
+        })
+    }).then((response) => {
+        result = response.data;
+    })
+    return result;
+}
