@@ -1,6 +1,6 @@
 import Home from '../components/FrontDesk/Main/Home'
-import Note from "../components/FrontDesk/Main/Note";
-import Saysay from "../components/FrontDesk/Main/Saysay";
+import NoteList from "../components/FrontDesk/Main/NoteList.vue";
+import SaysayList from "../components/FrontDesk/Main/SaysayList.vue";
 import Comment from "../components/FrontDesk/Main/Comment.vue";
 import Eihei from "../components/FrontDesk/Main/Eihei";
 import Login from "../components/Login";
@@ -25,7 +25,7 @@ export const routes = [
             },
             {
                 path: '/note',
-                component: Note,
+                component: NoteList,
                 // children: [
                 //     {
                 //         path: '/note/:id',
@@ -35,7 +35,7 @@ export const routes = [
             },
             {
                 path: '/saysay',
-                component: Saysay
+                component: SaysayList
             },
             {
                 path: '/comment',

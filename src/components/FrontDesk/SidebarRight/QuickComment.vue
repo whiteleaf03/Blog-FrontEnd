@@ -28,6 +28,10 @@
     methods: {
       async submitComment() {
         await postComment(this.nickname, this.email, this.text, Date.now())
+        this.nickname = ''
+        this.email = ''
+        this.text = ''
+        alert('评论成功')
       }
     }
   }

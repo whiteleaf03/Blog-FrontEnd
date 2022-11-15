@@ -1,5 +1,5 @@
 <template>
-  <div id="Note">
+  <div id="NoteList">
     <div id="Note-Search" class="Note-Item">
       <p>搜索文章</p>
       <input placeholder="未来可期">
@@ -41,7 +41,7 @@
 
 <script>
   export default {
-    name: 'Note',
+    name: 'NoteList',
     data() {
       return {
         noteList: [{
@@ -60,7 +60,7 @@
 </script>
 
 <style scoped>
-  #Note {
+  #NoteList {
 
   }
 

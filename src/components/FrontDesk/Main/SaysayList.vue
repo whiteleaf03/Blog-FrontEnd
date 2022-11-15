@@ -1,5 +1,5 @@
 <template>
-  <div id="Saysay">
+  <div id="SaysayList">
     <div id="Saysay-Start" class="Saysay-Item">至今已发布说说 {{sum}} 条啦 (≥w≤)</div>
     <div class="Saysay-Item" v-for="saysay in this.saysayList">
       <div class="info">
@@ -21,7 +21,7 @@
   import {tsToDate} from "../../../utils.js";
 
   export default {
-    name: 'Saysay',
+    name: 'SaysayList',
     data() {
       return {
         height: '0px',
