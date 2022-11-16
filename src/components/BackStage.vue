@@ -24,7 +24,7 @@
 
   #BDMain {
     display: inline-block;
-    margin: 32px 72px;
+    /*margin: 32px;*/
     padding: 48px;
     background-color: rgba(245, 245, 245, 0.5);
     flex: 8;

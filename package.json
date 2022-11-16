@@ -11,6 +11,7 @@
   "dependencies": {
     "@wangeditor/editor": "^5.1.21",
     "@wangeditor/editor-for-vue": "^5.1.12",
+    "ant-design-vue": "^3.2.15",
     "axios": "^0.27.2",
     "element-plus": "^2.2.18",
     "vue": "^3.2.37",

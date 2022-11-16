@@ -1,37 +1,41 @@
 <template>
   <div id="BSComment">
-    <div id="title">网站留言管理</div>
     <div id="CommentList">
-      <div class="line">
-        <div class="info">
-          <div class="date">日期</div>
-          <div class="nickname">昵称</div>
-          <div class="email">邮箱</div>
-          <div class="text">评论内容</div>
-        </div>
-        <div style="flex: 1"></div>
-      </div>
-      <div class="line" v-for="comment in this.commentList">
-        <div class="info">
-          <div class="date">{{ comment.date }}</div>
-          <div class="nickname">{{ comment.nickname }}</div>
-          <div class="email">{{ comment.email }}</div>
-          <div class="text">{{ comment.text }}</div>
-        </div>
-        <button @click="this.delete(comment.id)">删&nbsp;除</button>
-      </div>
+      <a-table :dataSource="commentList" :columns="columns" :scroll="true" height="600px"/>
     </div>
   </div>
 </template>
 
 <script>
-import {deleteComment, getComment} from "../../request/BackDeskRequest.js";
+  import {deleteComment, getComment} from "../../request/BackDeskRequest.js";
   import {tsToDate} from "../../utils.js";
 
   export default {
     name: "BSComment",
     data() {
       return {
+        columns: [
+          {
+            key: 'nickname',
+            dataIndex: 'nickname',
+            title: '昵称'
+          },
+          {
+            key: 'date',
+            dataIndex: 'date',
+            title: '日期'
+          },
+          {
+            key: 'email',
+            dataIndex: 'email',
+            title: '邮箱'
+          },
+          {
+            key: 'text',
+            dataIndex: 'text',
+            title: '留言'
+          }
+        ],
         commentList: []
       }
     },
@@ -46,12 +50,15 @@ import {deleteComment, getComment} from "../../request/BackDeskRequest.js";
         }
         result.data = result.data.reverse()
         this.commentList = result.data
+        document.getElementById('CommentList').style.height = `${document.getElementById('BSComment').clientHeight - document.getElementById('title')}px`
       },
-      async delete(id) {
-        let result = await deleteComment(id)
-        if (result.msg === 'OK') {
-          location.reload()
-        }
+      async delete(a, b) {
+        // let result = await deleteComment(id)
+        // if (result.msg === 'OK') {
+        //   location.reload()
+        // }
+        console.log(a)
+        console.log(b)
       }
     }
   }
@@ -61,6 +68,7 @@ import {deleteComment, getComment} from "../../request/BackDeskRequest.js";
   #BSComment {
     display: flex;
     flex-direction: column;
+    height: 300px;
   }
 
   #title {
@@ -71,52 +79,6 @@ import {deleteComment, getComment} from "../../request/BackDeskRequest.js";
   #CommentList {
     display: flex;
     flex-direction: column;
-    margin-top: 16px;
-  }
-
-  .line {
-    display: flex;
-    background-color: whitesmoke;
-    margin-top: 16px;
-    padding: 16px 32px;
-    min-height: 32px;
-    align-items: center;
-  }
-
-  .info {
-    display: flex;
-    width: 100%;
-    flex: 10;
-  }
-
-  .line button {
-    margin-left: auto;
-    flex: 1;
-    border-radius: 5px;
-    width: 100%;
-    padding: 6px;
-    font-size: larger;
-    background-color: whitesmoke;
-    border: 1px solid #42a1ff;
-  }
-
-  .line button:active {
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2), 0 10px 50px 0 rgba(0,0,0,0.2);
-  }
-
-  .date {
-    flex: 2;
-  }
-
-  .nickname {
-    flex: 2;
-  }
-
-  .email {
-    flex: 3;
-  }
-
-  .text {
-    flex: 5;
+    /*overflow-x:hidden;*/
   }
 </style>

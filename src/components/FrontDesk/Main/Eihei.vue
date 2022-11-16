@@ -3,14 +3,12 @@
     <div id="Recommend">
       <div id="Recommend-title">站☆长☆推☆荐</div>
       <div id="Recommend-banner">
-        <el-carousel height="400px" indicator-position="outside">
-          <el-carousel-item v-for="banner in this.bannerList">
-            <a :href="banner.resourcePath">
+        <a-carousel autoplay="true" arrows>
+          <div v-for="banner in this.bannerList"><a :href="banner.resourcePath">
               <img :src="banner.coverPath" class="banner-image">
-              <div class="banner-info">[{{banner.type}}]{{banner.title}}</div>
-            </a>
-          </el-carousel-item>
-        </el-carousel>
+              <div class="banner-info">[{{ banner.type }}]{{ banner.title }}</div>
+          </a></div>
+        </a-carousel>
       </div>
       <div><a class="Recommend-line" v-for="recommend in this.recommendList" :href="recommend.resourcePath">
         <div style="flex: 3"></div>
