@@ -47,6 +47,12 @@
 </script>
 
 <style scoped>
+  * {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+
   #UserCard {
     position: relative;
     padding: 16px;

@@ -17,6 +17,12 @@
 </script>
 
 <style scoped>
+  * {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+
   #LinkList {
     position: relative;
     padding: 16px 32px;

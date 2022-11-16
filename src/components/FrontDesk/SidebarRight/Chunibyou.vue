@@ -27,6 +27,12 @@
 </script>
 
 <style scoped>
+  * {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+
   #Chunibyou {
     position: relative;
     backdrop-filter: blur(3px);

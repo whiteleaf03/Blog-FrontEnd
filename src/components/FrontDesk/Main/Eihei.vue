@@ -42,13 +42,12 @@
     methods: {
       async init() {
         let result = await getRecommand()
-        result.data = result.data.reverse()
         if (result.data.length <= 3) {
           this.bannerList = result.data
           console.log('设置完毕')
         } else {
           this.bannerList = result.data.slice(0, 3)
-          this.recommendList = result.data.slice(3)
+          this.recommendList = (result.data.slice(3)).reverse()
         }
         let bannerWidth = document.getElementById('Recommend-title').clientWidth
         for (let index in document.getElementsByClassName('banner-image').length) {
@@ -74,6 +73,7 @@
     color: black;
     width: 100%;
     height: 100%;
+    position: relative;
   }
 
   .banner-image {
@@ -84,10 +84,8 @@
 
   .banner-info {
     position: absolute;
-    height: 32px;
-    line-height: 32px;
     left: 0px;
-    bottom: 0px;
+    top: 0px;
     font-family: Tanugo糖果手写体, fangsong;
     font-weight: 600;
     font-size: 24px;

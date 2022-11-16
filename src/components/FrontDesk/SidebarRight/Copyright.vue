@@ -16,6 +16,12 @@
 </script>
 
 <style scoped>
+  * {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+
   #Copyright {
     position: relative;
     padding: 16px 32px;

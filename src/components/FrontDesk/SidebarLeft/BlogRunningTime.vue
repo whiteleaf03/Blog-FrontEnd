@@ -43,6 +43,10 @@
 </script>
 
 <style>
+  p {
+    margin: 0;
+  }
+
   #BlogRunningTime {
     position: relative;
     padding: 16px;
