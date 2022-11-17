@@ -82,14 +82,14 @@ import {getComment} from "../../../request/FontDeskRequest.js";
   }
 
   #title {
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.75);
     margin-bottom: 36px;
     padding: 16px;
     text-align: center;
     font-family: 包圆小白体, fangsong;
     font-size: 48px;
     font-weight: 600;
-    border-radius: 15px;
+    border-radius: 5px;
   }
 
   #waterfall {
@@ -110,13 +110,15 @@ import {getComment} from "../../../request/FontDeskRequest.js";
     flex-direction: column;
     min-height: 75px;
     margin-bottom: 16px;
-    background-color: whitesmoke;
+    /*background-color: rgba(255, 255, 255, 1);*/
+    /*background-image: linear-gradient(90deg, #ffffff 0%, #f2f2f2 30%, #d6d6d6 60%, #b5b5b5 100%);*/
+    background-color: rgba(245, 245, 245, 0.75);
   }
 
   .nickname {
     flex: 1;
-    font-family: 包圆小白体, fangsong;
-    font-size: 24px;
+    font-family: Tanugo糖果手写体, fangsong;
+    font-size: x-large;
   }
 
   .date {
@@ -127,5 +129,6 @@ import {getComment} from "../../../request/FontDeskRequest.js";
 
   .comment {
     flex: 3;
+    font-size: medium;
   }
 </style>

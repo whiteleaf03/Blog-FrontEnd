@@ -14,6 +14,7 @@ import BSNote from "../components/BackStage/BSNote";
 import BSEihei from "../components/BackStage/BSEihei";
 import Note from "../components/FrontDesk/Main/Page/Note.vue";
 import Saysay from "../components/FrontDesk/Main/Page/Saysay.vue";
+import Timeline from "../components/FrontDesk/Main/Timeline.vue";
 
 export const routes = [
     {
@@ -44,6 +45,10 @@ export const routes = [
             {
                 path: '/comment',
                 component: Comment
+            },
+            {
+                path: '/timeline',
+                component: Timeline
             },
             {
                 path: '/eihei',

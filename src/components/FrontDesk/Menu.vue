@@ -6,7 +6,7 @@
       <router-link to="/note" class="link"><img src="/images/icon/书籍_book.png" class="icon"><p>笔记</p></router-link>
       <router-link to="/saysay" class="link"><img src="/images/icon/标签_tag-one.png" class="icon"><p>说说</p></router-link>
       <router-link to="/comment" class="link"><img src="/images/icon/邮件_mail.png" class="icon"><p>留言</p></router-link>
-      <router-link to="/comment" class="link"><img src="/images/icon/分支_branch.png" class="icon"><p>时间线</p></router-link>
+      <router-link to="/timeline" class="link"><img src="/images/icon/分支_branch.png" class="icon"><p>时间线</p></router-link>
       <router-link to="/eihei" class="link" style="flex: 5;"><p>诶嘿ヾ(*ゝω・*)ノ</p></router-link>
       <router-link to="/login" class="link" style="flex: 1;"><img src="/images/icon/我的_me.png" class="icon"></router-link>
     </div>
