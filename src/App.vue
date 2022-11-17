@@ -8,8 +8,8 @@
       randomBackgroundImage() {
         let file
         do {
-          file = Math.round(Math.random() * 21)
-        } while (file === 21 || file === 0)
+          file = Math.round(Math.random() * 18)
+        } while (file === 18 || file === 0)
         document.body.style.backgroundImage = `url("/images/background/${file}.jpg")`
       }
     },
