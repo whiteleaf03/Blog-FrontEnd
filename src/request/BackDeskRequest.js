@@ -138,3 +138,25 @@ export async function deleteComment(id) {
     })
     return result;
 }
+
+export async function postNote(title, subTitle, coverPath, date, text) {
+    let result;
+    await axios({
+        url: '/bs/api/note',
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+            'token': getCookie('token')
+        },
+        data: JSON.stringify({
+            coverPath: title,
+            title: subTitle,
+            subTitle: coverPath,
+            date: date,
+            text: text
+        })
+    }).then((response) => {
+        result = response.data
+    })
+    return result;
+}
