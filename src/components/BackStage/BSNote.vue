@@ -52,9 +52,9 @@
     name: "BSNote",
     components: { Editor, Toolbar },
     setup() {
-      let title
-      let subTitle
-      let coverPath
+      let title = ref('')
+      let subTitle = ref('')
+      let coverPath = ref('')
 
       // 编辑器实例，必须用 shallowRef
       const editorRef = shallowRef()
@@ -77,14 +77,19 @@
       }
 
       async function postData() {
-        let result = await postNote(title, subTitle, coverPath, Date.now(), valueHtml.value)
-        console.log(result.data)
+        let result = await postNote(title.value, subTitle.value, coverPath.value, Date.now(), valueHtml.value)
+        console.log(result)
+        if (result.status === 0) {
+          alert('提交成功')
+        } else {
+          alert(result.msg)
+        }
       }
 
       return {
-        title: '',
-        subTitle: '',
-        coverPath: '',
+        title,
+        subTitle,
+        coverPath,
         editorRef,
         valueHtml,
         mode: 'simple',
