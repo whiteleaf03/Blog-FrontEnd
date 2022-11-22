@@ -149,9 +149,9 @@ export async function postNote(title, subTitle, coverPath, date, text) {
             'token': getCookie('token')
         },
         data: JSON.stringify({
-            coverPath: title,
-            title: subTitle,
-            subTitle: coverPath,
+            coverPath: coverPath,
+            title: title,
+            subTitle: subTitle,
             date: date,
             text: text
         })
