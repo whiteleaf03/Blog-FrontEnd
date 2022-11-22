@@ -29,30 +29,21 @@
 
 <script>
   import {getNoteList} from "../../../request/FontDeskRequest.js";
+  import {tsToDate} from "../../../utils.js";
 
   export default {
     name: 'NoteList',
     data() {
       return {
-        noteList: [
-          {
-            title: 'Vite构建Vue项目',
-            subTitle: '构建命令及配置文件',
-            date: '2022-01-01',
-            coverPath: '/images/test/note01.png'
-          },
-          {
-            title: 'Springboot常用配置',
-            subTitle: 'Springboot配置，mybatis配置，Bean名防冲突',
-            date: '2022-01-01',
-            coverPath: '/images/test/note02.png'
-          }
-        ]
+        noteList: []
       }
     },
     methods: {
       async init() {
         let result = await getNoteList()
+        for (let index in result.data) {
+          result.data[index].date = tsToDate(result.data[index].date)
+        }
         this.noteList = result.data
       },
       goToNote(id) {
