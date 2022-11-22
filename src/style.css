@@ -28,6 +28,7 @@
 .editor-content-view pre>code {
     display: block;
     padding: 10px;
+    user-select: text;
 }
 
 .editor-content-view table {

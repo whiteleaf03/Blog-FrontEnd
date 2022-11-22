@@ -44,7 +44,7 @@
         for (let index in result.data) {
           result.data[index].date = tsToDate(result.data[index].date)
         }
-        this.noteList = result.data
+        this.noteList = result.data.reverse()
       },
       goToNote(id) {
         this.$router.push(`/note/${id}`)
