@@ -14,11 +14,14 @@
     "ant-design-vue": "^3.2.15",
     "axios": "^0.27.2",
     "element-plus": "^2.2.18",
+    "highlight.js": "^11.6.0",
+    "prismjs": "^1.29.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
+    "babel-plugin-prismjs": "^2.1.0",
     "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.8",
     "vite": "^3.0.7"

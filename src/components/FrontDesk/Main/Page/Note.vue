@@ -9,22 +9,42 @@
       <div id="cover"><img :src="coverPath" alt=""></div>
     </div>
     <div id="content">
-
+      <div v-html="text" class="editor-content-view"></div>
     </div>
   </div>
 </template>
 
 <script>
+  import {getNote} from "../../../../request/FontDeskRequest.js";
+  import {tsToDate} from "../../../../utils.js";
+
   export default {
     name: "Note",
     data() {
       return {
-        title: 'Vite构建Vue项目',
-        subTitle: '构建命令及配置文件',
-        date: '2022-01-01',
-        coverPath: '/images/test/note01.png',
-        richText: ''
+        title: '',
+        subTitle: '',
+        date: '',
+        coverPath: '',
+        text: ''
       }
+    },
+    methods: {
+      async init() {
+        let result = await getNote(this.$route.params.id)
+        this.title = result.data.title
+        this.subTitle = result.data.subTitle
+        this.date = tsToDate(result.data.date)
+        this.coverPath = result.data.coverPath
+        this.text = result.data.text
+        console.log('高亮')
+      }
+    },
+    created() {
+      this.init()
+    },
+    mounted() {
+      // this.init()
     }
   }
 </script>
@@ -38,7 +58,8 @@
   #info {
     display: flex;
     flex-direction: column;
-    height: 320px;
+    height: auto;
+    margin-bottom: 16px;
   }
 
   #title {
@@ -70,5 +91,9 @@
     height: 100%;
     object-fit: cover;
     object-position: 50% 25%;
+  }
+
+  #content {
+    margin-top: 16px;
   }
 </style>

@@ -94,3 +94,34 @@ export async function getAnalysis() {
     })
     return result
 }
+
+export async function getNoteList() {
+    let result;
+    await axios({
+        url: '/fd/api/note',
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then((response) => {
+        result = response.data;
+    })
+    return result
+}
+
+export async function getNote(id) {
+    let result;
+    await axios({
+        url: '/fd/api/note',
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        params: {
+            id: id
+        }
+    }).then((response) => {
+        result = response.data;
+    })
+    return result
+}

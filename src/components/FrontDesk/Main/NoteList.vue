@@ -5,7 +5,7 @@
       <input placeholder="未来可期">
       <button><img src="/images/icon/搜索_search.png"></button>
     </div>
-    <div class="Note-Item" v-for="note in this.noteList" @click="this.goToNote(1)">
+    <div class="Note-Item" v-for="note in this.noteList" @click="this.goToNote(note.id)">
       <div class="Note-Info">
         <div class="Note-Avatar"></div>
         <div style="display: flex; flex-direction: column">
@@ -28,6 +28,8 @@
 </template>
 
 <script>
+  import {getNoteList} from "../../../request/FontDeskRequest.js";
+
   export default {
     name: 'NoteList',
     data() {
@@ -49,9 +51,16 @@
       }
     },
     methods: {
+      async init() {
+        let result = await getNoteList()
+        this.noteList = result.data
+      },
       goToNote(id) {
         this.$router.push(`/note/${id}`)
       }
+    },
+    mounted() {
+      this.init()
     }
   }
 </script>
