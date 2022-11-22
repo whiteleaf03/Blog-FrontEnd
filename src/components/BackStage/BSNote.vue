@@ -77,7 +77,7 @@
       }
 
       async function postData() {
-        let result = await postNote(title.value, subTitle.value, coverPath.value, Date.now(), valueHtml.value)
+        let result = await postNote(title.value, subTitle.value, coverPath.value, Date.now(), valueHtml.value.replace('<p><br></p>', ''))
         console.log(result)
         if (result.status === 0) {
           alert('提交成功')

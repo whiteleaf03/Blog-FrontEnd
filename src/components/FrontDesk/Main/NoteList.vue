@@ -134,7 +134,7 @@
   .Note-Main {
     display: flex;
     flex-direction: column;
-    height: 296px;
+    height: 336px;
     border: 1px rgba(200, 200, 200) solid;
     border-radius: 5px;
   }
@@ -167,6 +167,7 @@
     font-family: Tanugo糖果手写体, fangsong;
     flex: 1;
     padding: 0 32px;
+    text-align: right;
   }
 
   a, a:visited {
