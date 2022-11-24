@@ -1,23 +1,25 @@
 <template>
   <div id="Login">
     <div style="flex: 1"></div>
-    <div style="display: flex;flex-direction: column; flex: 1">
-      <div style="flex: 1"></div>
-      <div id="Login-bg">
-        <div id="Login-title">用户登录</div>
-        <div id="Login-input">
-          <div class="tips">用户名</div>
-          <div class="input"><input v-model="username" type="text"></div>
-          <div class="tips">密码</div>
-          <div class="input"><input v-model="password" type="password"></div>
+    <div style="flex: 1; display: flex; flex-direction: column;">
+      <div style="flex: 3; display: flex;flex-direction: column;">
+        <div style="flex: 1"></div>
+        <div id="Login-bg">
+          <div id="Login-title">用户登录</div>
+          <div id="Login-input">
+            <div class="tips">用户名</div>
+            <div class="input"><input v-model="username" type="text"></div>
+            <div class="tips">密码</div>
+            <div class="input"><input v-model="password" type="password"></div>
+          </div>
+          <div id="Login-button">
+            <button @click="login">登&nbsp;&nbsp;&nbsp;录</button>
+          </div>
         </div>
-        <div id="Login-button">
-          <button @click="login">登&nbsp;&nbsp;&nbsp;录</button>
-        </div>
+        <div style="flex: 1"></div>
       </div>
-      <div style="flex: 2"></div>
+      <a href="https://beian.miit.gov.cn/" id="Beian" target="_blank">这是备案号\(^o^)/~</a>
     </div>
-
     <div style="flex: 1"></div>
   </div>
 </template>
@@ -129,5 +131,20 @@
     border-radius: 5px;
     font-size: 24px;
     font-family: 包圆小白体, fangsong;
+  }
+
+  #Beian {
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    background-color: rgba(245, 245, 245, 0.5);
+    margin: 26px 20px 26px 26px;
+    border-radius: 5px;
+    border: 1px solid deepskyblue;
+    padding: 8px 0;
+    font-family: 包圆小白体, fangsong;
+    font-size: xx-large;
   }
 </style>
