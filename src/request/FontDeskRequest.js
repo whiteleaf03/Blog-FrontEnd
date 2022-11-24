@@ -125,3 +125,17 @@ export async function getNote(id) {
     })
     return result
 }
+
+export async function getTimeline() {
+    let result;
+    await axios({
+        url: '/fd/api/timeline',
+        method: 'get',
+        header: {
+            'Content-Type': 'application/json',
+        }
+    }).then((response) => {
+        result = response.data;
+    })
+    return result;
+}

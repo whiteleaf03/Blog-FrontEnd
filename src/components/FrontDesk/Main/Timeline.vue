@@ -1,27 +1,35 @@
 <template>
   <div id="Timeline">
-    <div class="time">
-      <div class="date">2021年10月6日</div>
-      <div class="event">购买腾讯云服务器</div>
-    </div>
-    <div class="time">
-      <div class="date">2022年4月14日</div>
-      <div class="event">风之屿v1.0建立</div>
-    </div>
-    <div class="time">
-      <div class="date">2022年8月4日</div>
-      <div class="event">网站因备案关闭</div>
-    </div>
-    <div class="time">
-      <div class="date">2022年9月3日</div>
-      <div class="event">风之屿v2.0建立</div>
+    <div class="timeline" v-for="timeline in this.timelineList">
+      <div class="date">{{ timeline.date }}</div>
+      <div class="event">{{ timeline.event }}</div>
     </div>
   </div>
 </template>
 
 <script>
+import {tsToDate} from "../../../utils.js";
+import {getTimeline} from "../../../request/FontDeskRequest.js";
+
   export default {
-    name: "Timeline"
+    name: "Timeline",
+    data() {
+      return {
+        timelineList: []
+      }
+    },
+    methods: {
+      async init() {
+        let result = await getTimeline()
+        for (let index in result.data) {
+          result.data[index].date = tsToDate(result.data[index].date).split(' ')[0].replace('/', '年').replace('/', '月') + '日'
+        }
+        this.timelineList = result.data
+      }
+    },
+    mounted() {
+      this.init()
+    }
   }
 </script>
 
@@ -31,7 +39,7 @@
     flex-direction: column;
   }
 
-  .time {
+  .timeline {
     flex: 1;
     display: flex;
     margin-top: 16px;
