@@ -15,6 +15,7 @@ import BSEihei from "../components/BackStage/BSEihei";
 import Note from "../components/FrontDesk/Main/Page/Note.vue";
 import Saysay from "../components/FrontDesk/Main/Page/Saysay.vue";
 import Timeline from "../components/FrontDesk/Main/Timeline.vue";
+import BSChunibyou from "../components/BackStage/BSChunibyou.vue";
 
 export const routes = [
     {
@@ -68,6 +69,10 @@ export const routes = [
             {
                 path: '/admin/analysis',
                 component: BSAnalysis
+            },
+            {
+                path: '/admin/chunibyou',
+                component: BSChunibyou
             },
             {
                 path: '/admin/note',

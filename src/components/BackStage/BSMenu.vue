@@ -3,6 +3,7 @@
     <ul id="BSMenu">
       <li><div id="title">风之屿</div></li>
       <li><div><router-link to="/admin/analysis"><div class="li">数据分析</div></router-link></div></li>
+      <li><div><router-link to="/admin/chunibyou"><div class="li">中二语句管理</div></router-link></div></li>
       <li><div><router-link to="/admin/note"><div class="li">笔记管理</div></router-link></div></li>
       <li><div><router-link to="/admin/saysay"><div class="li">说说管理</div></router-link></div></li>
       <li><div><router-link to="/admin/daily"><div class="li">日记管理</div></router-link></div></li>
