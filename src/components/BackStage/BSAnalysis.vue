@@ -82,11 +82,11 @@
   }
 
   .line {
-    width: 160px;
-    margin: 36px 72px;
+    flex: 1;
+    margin: 36px 96px;
     background-color: whitesmoke;
     padding: 32px;
-    border: 1px solid gold;
+    border: 3px solid gold;
     border-radius: 15px;
   }
 
