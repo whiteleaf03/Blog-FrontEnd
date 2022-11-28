@@ -2,7 +2,6 @@
   <div id="BackStage">
     <div style="flex: 1"><BDMenu></BDMenu></div>
     <div id="BDMain"><router-view></router-view></div>
-<!--    <div id="BDMain"></div>-->
   </div>
 </template>
 
