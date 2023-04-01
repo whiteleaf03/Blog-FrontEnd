@@ -10,7 +10,7 @@
           </a></div>
         </a-carousel>
       </div>
-      <div><a class="Recommend-line" v-for="recommend in this.recommendList" :href="recommend.resourcePath">
+      <div><a class="Recommend-line" v-for="recommend in this.recommendList" :href="recommend.resourcePath" target="_blank">
         <div style="flex: 3"></div>
         <img class="Recommend-line-img" :src="recommend.coverPath">
         <div style="flex: 2"></div>
@@ -32,8 +32,52 @@
     data() {
       return {
         url: '',
-        bannerList: [],
-        recommendList: []
+        bannerList: [
+          {
+            resourcePath: 'https://www.bilibili.com/video/BV1zZ4y137KH',
+            coverPath: '/images/test/Recommend-002.jpg',
+            type: '视频',
+            title: '【喵☆酱】拼凑的断音'
+          },
+          {
+            resourcePath: 'https://www.bilibili.com/video/BV1R7411774f',
+            coverPath: '/images/test/123.png',
+            type: '视频',
+            title: 'SpringCloudAlibaba教程'
+          },
+          {
+            resourcePath: 'https://www.bilibili.com/video/BV1ob4y1Y7Ep',
+            coverPath: '/images/test/456.jpg',
+            type: '视频',
+            title: 'Cookie、Session、Token究竟区别在哪'
+          }
+        ],
+        recommendList: [
+          {
+            resourcePath: 'https://www.bilibili.com/video/BV1gv4y1Q7x9',
+            coverPath: '/images/test/789.jpg',
+            type: '歌曲翻唱',
+            title: '【多多poi】枕边童话'
+          },
+          {
+            resourcePath: 'https://www.bilibili.com/video/BV1Bq4y1Q7GZ',
+            coverPath: '/images/test/SpringCode.jpg',
+            type: '视频',
+            title: 'Spring源码'
+          },
+          {
+            resourcePath: 'https://live.bilibili.com/1051386',
+            coverPath: '/images/test/train.jpg',
+            type: '直播',
+            title: '火车带你去旅行'
+          },
+          {
+            resourcePath: 'https://www.bilibili.com/video/BV1ev411k73K',
+            coverPath: '/images/test/cat.jpg',
+            type: '直播录屏',
+            title: '猫 | 自习 | 轻音乐'
+          }
+        ]
       }
     },
     mounted() {
@@ -101,6 +145,7 @@
 
   .Recommend-line-img {
     flex: 7;
+    width: 288px;
   }
 
   .Recommend-line-info {

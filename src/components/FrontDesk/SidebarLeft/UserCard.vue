@@ -27,9 +27,9 @@
     name: "UserCard",
     data() {
       return {
-        note: 0,
-        saysay: 0,
-        recommend: 0
+        note: 1,
+        saysay: 3,
+        recommend: 7
       }
     },
     mounted() {
@@ -76,7 +76,7 @@
     font-family: 包圆小白体, fangsong, serif;
     height: 54px;
     line-height: 54px;
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: bolder;
     vertical-align: middle;
   }

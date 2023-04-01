@@ -35,7 +35,15 @@
     name: 'NoteList',
     data() {
       return {
-        noteList: []
+        noteList: [
+          {
+            id: 1,
+            date: '2022-11-21 20:06:05',
+            coverPath: '/images/test/note01.png',
+            title: '使用Vite构建Vue3项目',
+            subTitle: '构建命令及配置文件'
+          }
+        ]
       }
     },
     methods: {

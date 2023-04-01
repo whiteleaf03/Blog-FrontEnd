@@ -22,11 +22,52 @@
     name: "Note",
     data() {
       return {
-        title: '',
-        subTitle: '',
-        date: '',
-        coverPath: '',
-        text: ''
+        title: '使用Vite构建Vue3项目',
+        subTitle: '构建命令及配置文件',
+        date: '2022-11-21 20:06:05',
+        coverPath: '/images/test/note01.png',
+        text: "<h2>初始化项目（以npm为例）</h2><pre><code >npm create vite@latest</code></pre><h2>vue.config.js配置文件</h2><pre><code class=\"language-javascript\">import { defineConfig } from java'vite'\n" +
+            "import vue from '@vitejs/plugin-vue'\n" +
+            "import AutoImport from 'unplugin-auto-import/vite'\n" +
+            "import Components from 'unplugin-vue-components/vite'\n" +
+            "import {AntDesignVueResolver} from 'unplugin-vue-components/resolvers'\n" +
+            "\n" +
+            "// https://vitejs.dev/config/\n" +
+            "export default defineConfig({\n" +
+            "  plugins: [\n" +
+            "    vue(),\n" +
+            "    //组件库自动导入\n" +
+            "    AutoImport({\n" +
+            "      resolvers: [AntDesignVueResolver()],\n" +
+            "    }),\n" +
+            "    Components({\n" +
+            "      resolvers: [AntDesignVueResolver()],\n" +
+            "    }),\n" +
+            "  ],\n" +
+            "  base: './',\n" +
+            "  //省略后缀\n" +
+            "  resolve: {\n" +
+            "    extensions: ['.js', '.vue']\n" +
+            "  },\n" +
+            "  //服务启动端口及代理\n" +
+            "  server: {\n" +
+            "    port: 80,\n" +
+            "    proxy: {\n" +
+            "      '/bs/api': {\n" +
+            "        target: 'http://127.0.0.1:8080',\n" +
+            "        changeOrigin: true\n" +
+            "      },\n" +
+            "      '/fd/api': {\n" +
+            "        target: 'http://127.0.0.1:8080',\n" +
+            "        changeOrigin: true\n" +
+            "      }\n" +
+            "    }\n" +
+            "  },\n" +
+            "  //构建路径\n" +
+            "  build: {\n" +
+            "    outDir: 'Blog-FrontEnd'\n" +
+            "  }\n" +
+            "})</code></pre>"
       }
     },
     methods: {

@@ -1,6 +1,6 @@
 <template>
   <div id="Chunibyou">
-    <p>&nbsp;&nbsp;{{ sentence }}</p>
+    <p>{{ sentence }}</p>
   </div>
 </template>
 
@@ -11,7 +11,8 @@
     name: "Chunibyou",
     data() {
       return {
-        sentence: 'Something Bad Happen!'
+        // sentence: 'Something Bad Happen!'
+        sentence: '吾心吾行澄如明镜 所作所为皆属正义'
       }
     },
     methods: {

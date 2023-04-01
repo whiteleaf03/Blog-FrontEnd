@@ -33,6 +33,6 @@
       }
     },
     build: {
-      outDir: 'Blog-FrontEnd'
+      outDir: 'dist'
     }
   })

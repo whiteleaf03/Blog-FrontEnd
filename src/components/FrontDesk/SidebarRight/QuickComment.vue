@@ -27,6 +27,14 @@
     },
     methods: {
       async submitComment() {
+        let email = this.email
+        if(email !== '') {
+          const reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+          if(!reg.test(email)) {
+            alert("邮箱格式不正确，请重新输入！");
+            return false;
+          }
+        }
         await postComment(this.nickname, this.email, this.text, Date.now())
         this.nickname = ''
         this.email = ''

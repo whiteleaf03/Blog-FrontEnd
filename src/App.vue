@@ -10,7 +10,7 @@
         do {
           file = Math.round(Math.random() * 18)
         } while (file === 18 || file === 0)
-        document.body.style.backgroundImage = `url("/images/background/${file}.jpg")`
+        document.body.style.backgroundImage = `url("/images/background/15.jpg")`
       }
     },
     mounted() {
@@ -43,7 +43,7 @@
 
   @font-face {
     font-family: 阿里巴巴普惠体-regular;
-    src: url("/font-family/AlibabaPuHuiTi-2-55-Regular");
+    src: url("/font-family/AlibabaPuHuiTi-2-55-Regular.ttf");
   }
 
   @font-face {

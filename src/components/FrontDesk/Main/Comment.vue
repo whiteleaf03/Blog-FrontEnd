@@ -38,9 +38,27 @@ import {getComment} from "../../../request/FontDeskRequest.js";
     name: 'Comment',
     data() {
       return {
-        commentListLeft: [],
-        commentListMiddle: [],
-        commentListRight: []
+        commentListLeft: [
+          {
+            date: '置顶',
+            nickname: 'WhiteLeaf03',
+            text: '欢迎光临风之屿!'
+          }
+        ],
+        commentListMiddle: [
+          {
+            date: '置顶',
+            nickname: 'WhiteLeaf03',
+            text: '希望你能在此收获快乐!'
+          }
+        ],
+        commentListRight: [
+          {
+            date: '置顶',
+            nickname: 'WhiteLeaf03',
+            text: '期待你的留言!'
+          }
+        ]
       }
     },
     mounted() {
@@ -49,6 +67,9 @@ import {getComment} from "../../../request/FontDeskRequest.js";
     methods: {
       async init() {
         let result = await getComment()
+        this.commentListLeft = []
+        this.commentListMiddle = []
+        this.commentListRight = []
         console.log(result)
         let i = 0
         for (let index in result.data) {
@@ -67,6 +88,24 @@ import {getComment} from "../../../request/FontDeskRequest.js";
             i = 0
           }
         }
+        this.commentListLeft.push({
+              date: '置顶',
+              nickname: 'WhiteLeaf03',
+              text: '欢迎光临风之屿!'
+        })
+
+        this.commentListMiddle.push({
+              date: '置顶',
+              nickname: 'WhiteLeaf03',
+              text: '希望你能在此收获快乐!'
+        })
+
+        this.commentListRight.push({
+          date: '置顶',
+          nickname: 'WhiteLeaf03',
+          text: '期待你的留言!'
+        })
+
         this.commentListLeft = this.commentListLeft.reverse()
         this.commentListMiddle = this.commentListMiddle.reverse()
         this.commentListRight = this.commentListRight.reverse()
